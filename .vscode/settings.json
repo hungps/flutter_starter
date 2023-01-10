@@ -1,0 +1,29 @@
+{
+  "editor.formatOnSave": true,
+  "dart.previewFlutterUiGuides": true,
+  "dart.previewFlutterUiGuidesCustomTracking": true,
+  "dart.lineLength": 100,
+  "dart.flutterSdkPath": ".fvm/flutter_sdk",
+  "[dart]": {
+    "editor.rulers": [100],
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": false,
+    "files.insertFinalNewline": true
+  },
+  "search.exclude": {
+    "**/.fvm": true,
+    "**/build": true
+  },
+  "files.watcherExclude": {
+    "**/.fvm": true,
+    "**/build": true
+  },
+  "files.exclude": {
+    "**/.gitkeep": true,
+    "**/*.g.dart": true,
+    "**/*.freezed.dart": true
+  }
+}
