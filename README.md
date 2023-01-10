@@ -4,13 +4,12 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+- Install [Fvm](https://fvm.app/docs/getting_started/installation).
 
-A few resources to get you started if this is your first Flutter project:
+- Go to this project folder and run `fvm install` to install the correctsponding Flutter SDK version.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+> If you are not using Fvm, make sure your Flutter version in your local machine matched with the `.fvm/fvm_config.json`
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Run `flutter doctor` and make sure that there is no error occurred.
+
+- This project is optimized for [Visual Studio Code](https://code.visualstudio.com/) user
