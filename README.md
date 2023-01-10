@@ -13,3 +13,7 @@ A new Flutter project.
 - Run `flutter doctor` and make sure that there is no error occurred.
 
 - This project is optimized for [Visual Studio Code](https://code.visualstudio.com/) user
+
+## Libraries
+
+- Navigation: [go_router](https://pub.dev/packages/go_router) and [go_router_builder](https://pub.dev/packages/go_router_builder)
