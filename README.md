@@ -14,6 +14,8 @@ A new Flutter project.
 
 - This project is optimized for [Visual Studio Code](https://code.visualstudio.com/) user
 
+- Clone `.env.example` to `.env`, `.env.staging` and `.env.production` and update the values accordingly to your build environment.
+
 ## Libraries
 
 - Navigation: [go_router](https://pub.dev/packages/go_router) and [go_router_builder](https://pub.dev/packages/go_router_builder)

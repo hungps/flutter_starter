@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="hungps.com.flutter_starter">
+    package="com.hungps.flutterstarter">
    <application
-        android:label="flutter_starter"
+        android:label="@string/APP_NAME"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

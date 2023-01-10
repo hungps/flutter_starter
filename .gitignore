@@ -45,3 +45,11 @@ app.*.map.json
 
 # fvm
 /.fvm/flutter_sdk
+
+# flutter_config
+**/ios/Flutter/tmp.xcconfig
+**/ios/.envfile
+
+# Environment files
+.env*
+!.env.example
