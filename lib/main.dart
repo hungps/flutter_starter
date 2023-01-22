@@ -8,7 +8,7 @@ void main() async {
 
   await FlutterConfig.loadEnvVariables();
 
-  configureDependencies();
+  await injectDependencies();
 
   runApp(const App());
 }

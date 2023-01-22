@@ -10,4 +10,6 @@ class AppEnv {
   static String get versionCode => _get('APP_VERSION_CODE');
 
   static String get versionName => _get('APP_VERSION_NAME');
+
+  static String get baseUrl => _get('BASE_URL');
 }

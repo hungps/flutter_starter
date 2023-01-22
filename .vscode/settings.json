@@ -24,7 +24,6 @@
   "files.exclude": {
     "**/.gitkeep": true,
     "**/*.g.dart": true,
-    "**/*.freezed.dart": true,
-    "lib/di.config.dart": true
+    "**/*.freezed.dart": true
   }
 }
