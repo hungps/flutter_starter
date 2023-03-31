@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:flutter_starter/data/sources/network/dio.dart';
 import 'package:flutter_starter/services/oauth_token_manager/oauth_token_manager.default.dart';
 import 'package:get_it/get_it.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
@@ -18,14 +19,6 @@ Future injectDependencies() async {
 }
 
 Future _registerModules() async {
-  provider.registerSingleton<Dio>(
-    Dio(BaseOptions(
-      baseUrl: AppEnv.baseUrl,
-      contentType: 'application/json; charset=utf-8',
-      connectTimeout: 30000,
-    )),
-  );
-
   provider.registerSingleton<FlutterSecureStorage>(
     const FlutterSecureStorage(),
   );
@@ -39,7 +32,10 @@ Future _registerServices() async {
 
 Future _registerDataSources() async {
   provider.registerSingleton<NetworkDataSource>(
-    NetworkDataSource(provider.get<Dio>(), tokenManager: provider.get<OauthTokenManager>()),
+    NetworkDataSource(NetworkDio(
+      baseUrl: AppEnv.baseUrl,
+      tokenManager: provider.get<OauthTokenManager>(),
+    )),
   );
 }
 
