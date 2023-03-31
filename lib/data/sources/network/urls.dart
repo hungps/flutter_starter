@@ -1,3 +1,8 @@
 abstract class NetworkUrls {
-  // static const String login = '/login';
+  // Auth
+  static const String login = '/login';
+
+  // Users
+  static const String users = '/users';
+  static const String usersMe = '$users/me';
 }

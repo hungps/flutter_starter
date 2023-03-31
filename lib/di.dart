@@ -1,3 +1,8 @@
+import 'dart:async';
+
+import 'package:flutter_starter/data/repositories/auth_repository/auth_repository.dart';
+import 'package:flutter_starter/data/repositories/auth_repository/auth_repository.default.dart';
+import 'package:flutter_starter/data/usecases/login.dart';
 import 'package:get_it/get_it.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:flutter_starter/data/sources/network/network.dart';
@@ -18,19 +23,19 @@ Future injectDependencies() async {
   await _registerStates();
 }
 
-Future _registerModules() async {
+FutureOr<void> _registerModules() {
   provider.registerSingleton<FlutterSecureStorage>(
     const FlutterSecureStorage(),
   );
 }
 
-Future _registerServices() async {
+FutureOr<void> _registerServices() {
   provider.registerSingleton<OauthTokenManager>(
     DefaultOauthTokenManager(provider.get<FlutterSecureStorage>()),
   );
 }
 
-Future _registerDataSources() async {
+FutureOr<void> _registerDataSources() {
   provider.registerSingleton<NetworkDataSource>(
     NetworkDataSource(NetworkDio(
       baseUrl: AppEnv.baseUrl,
@@ -43,8 +48,16 @@ Future _registerDataSources() async {
   );
 }
 
-Future _registerRepositories() async {}
+FutureOr<void> _registerRepositories() {
+  provider.registerSingleton<AuthRepository>(
+    DefaultAuthRepository(provider.get<NetworkDataSource>()),
+  );
+}
 
-Future _registerUseCases() async {}
+FutureOr<void> _registerUseCases() {
+  provider.registerSingleton<Login>(
+    Login(provider.get<AuthRepository>()),
+  );
+}
 
-Future _registerStates() async {}
+FutureOr<void> _registerStates() {}

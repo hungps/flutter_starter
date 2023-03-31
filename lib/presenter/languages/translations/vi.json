@@ -1,3 +1,7 @@
 {
+  "Errors": {
+    "AnUnknownErrorOccurred": "Lỗi không xác định",
+    "InvalidUsernameOrPassword": "Tên đăng nhập hoặc mật khẩu không đúng"
+  },
   "Hello": "Xin chào"
 }

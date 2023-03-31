@@ -1,3 +1,7 @@
 {
+  "Errors": {
+    "AnUnknownErrorOccurred": "An unknown error occurred",
+    "InvalidUsernameOrPassword": "Invalid username or password"
+  },
   "Hello": "Hello"
 }
