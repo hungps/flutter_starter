@@ -25,6 +25,7 @@ Future _registerModules() async {
       connectTimeout: 30000,
     )),
   );
+
   provider.registerSingleton<FlutterSecureStorage>(
     const FlutterSecureStorage(),
   );
