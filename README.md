@@ -38,6 +38,8 @@ flutter pub run easy_localization:generate \
   -o translation_keys.g.dart
 ```
 
+> If you are using Visual Studio Code, you can run this script by pressing `Cmd + Shift + P` and type `Run Task` and select `easy_localization:generate`
+
 ### When updating first splash screen image
 
 - Changing `assets/images/splash_background_1.png` to your new image
@@ -47,6 +49,8 @@ flutter pub run easy_localization:generate \
 ```bash
 flutter pub run flutter_native_splash:create
 ```
+
+> If you are using Visual Studio Code, you can run this script by pressing `Cmd + Shift + P` and type `Run Task` and select `flutter_native_splash:create`
 
 ### When adding new asset
 
@@ -63,6 +67,8 @@ flutter pub global activate flutter_gen
 ```bash
 flutter packages pub run build_runner build
 ```
+
+> If you are using Visual Studio Code, you can run this script by pressing `Cmd + Shift + P` and type `Run Task` and select `build_runner:watch`
 
 ### When adding new page
 
