@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter_starter/data/repositories/auth_repository/auth_repository.dart';
 import 'package:flutter_starter/data/repositories/auth_repository/auth_repository.default.dart';
+import 'package:flutter_starter/data/states/auth/auth_cubit.dart';
 import 'package:flutter_starter/data/usecases/login.dart';
 import 'package:get_it/get_it.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
@@ -60,4 +61,8 @@ FutureOr<void> _registerUseCases() {
   );
 }
 
-FutureOr<void> _registerStates() {}
+FutureOr<void> _registerStates() {
+  provider.registerSingleton(
+    AuthBloc(),
+  );
+}
