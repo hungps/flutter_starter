@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_starter/presenter/navigation/routes.dart';
+import 'package:flutter_starter/presenter/navigation/navigation.dart';
 
 class App extends StatelessWidget {
+  static final _appRouter = AppRouter();
+
   const App({super.key});
 
   @override
@@ -11,7 +13,8 @@ class App extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      routerConfig: appRouter,
+      routerDelegate: _appRouter.delegate(),
+      routeInformationParser: _appRouter.defaultRouteParser(),
     );
   }
 }

@@ -7,7 +7,10 @@ class DefaultOauthTokenManager extends OauthTokenManager {
   final String key;
   final FlutterSecureStorage _storage;
 
-  const DefaultOauthTokenManager(this.key, this._storage);
+  const DefaultOauthTokenManager._(this.key, this._storage);
+
+  const DefaultOauthTokenManager(FlutterSecureStorage storage, [String key = 'default'])
+      : this._(key, storage);
 
   String get _accessTokenKey => "$_prefix/$key/accessToken";
   String get _refreshTokenKey => "$_prefix/$key/refreshToken";
@@ -15,6 +18,10 @@ class DefaultOauthTokenManager extends OauthTokenManager {
   @override
   Future<Map<String, dynamic>?> getAuthenticatedHeaders(Map<String, dynamic> headers) async {
     final accessToken = await getAccessToken();
+
+    if (accessToken == null) {
+      return headers;
+    }
 
     return {
       ...headers,
