@@ -2,7 +2,7 @@ import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:flutter_starter/services/oauth_token_manager/oauth_token_manager.dart';
 
 class DefaultOauthTokenManager extends OauthTokenManager {
-  static const String _prefix = '@oauth-token';
+  static const String _prefix = '@@oauth-token';
 
   final String key;
   final FlutterSecureStorage _storage;
