@@ -53,3 +53,6 @@ app.*.map.json
 # Environment files
 .env*
 !.env.example
+
+# Mason
+.mason/

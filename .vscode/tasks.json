@@ -4,7 +4,7 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "build_runner:watch",
+      "label": "build_runner: watch",
       "type": "flutter",
       "command": "flutter",
       "args": [
@@ -16,7 +16,6 @@
       ],
       "problemMatcher": ["$dart-build_runner"],
       "group": "build",
-      "detail": "",
       "isBackground": true,
       "runOptions": {
         "runOn": "folderOpen",
@@ -25,7 +24,7 @@
       }
     },
     {
-      "label": "easy_localization:generate",
+      "label": "easy_localization: generate keys",
       "type": "flutter",
       "command": "flutter",
       "args": [
@@ -41,18 +40,21 @@
         "-o",
         "translation_keys.g.dart"
       ],
-      "problemMatcher": [],
-      "group": "build",
-      "detail": ""
+      "group": "build"
     },
     {
-      "label": "flutter_native_splash:create",
-      "type": "flutter",
-      "command": "flutter",
-      "args": ["pub", "run", "flutter_native_splash:create"],
+      "label": "mason: bloc_page",
+      "type": "shell",
+      "command": "mason make bloc_page --name '${input:page_name}'",
       "problemMatcher": [],
-      "group": "build",
-      "detail": ""
+      "group": "build"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "page_name",
+      "description": "Enter page name",
+      "type": "promptString"
     }
   ]
 }

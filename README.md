@@ -38,37 +38,7 @@ flutter pub run easy_localization:generate \
   -o translation_keys.g.dart
 ```
 
-> If you are using Visual Studio Code, you can run this script by pressing `Cmd + Shift + P` and type `Run Task` and select `easy_localization:generate`
-
-### When updating first splash screen image
-
-- Changing `assets/images/splash_background_1.png` to your new image
-
-- Run this script to generate the splash screen
-
-```bash
-flutter pub run flutter_native_splash:create
-```
-
-> If you are using Visual Studio Code, you can run this script by pressing `Cmd + Shift + P` and type `Run Task` and select `flutter_native_splash:create`
-
-### When adding new asset
-
-- Run this script to activate `flutter_gen` (if you haven't done it before)
-
-```bash
-flutter pub global activate flutter_gen
-```
-
-- Add the new asset to `assets/<type>/<file-name>`
-
-- Run this script to generate the asset
-
-```bash
-flutter packages pub run build_runner build
-```
-
-> If you are using Visual Studio Code, you can run this script by pressing `Cmd + Shift + P` and type `Run Task` and select `build_runner:watch`
+> If you are using Visual Studio Code, you can run this script by pressing `Cmd + Shift + P` and type `Run Task` and select `easy_localization: generate keys`
 
 ### When adding new page
 
@@ -76,10 +46,13 @@ flutter packages pub run build_runner build
 
 ```bash
 flutter pub global activate mason_cli
+mason get
 ```
 
 - Run this script to generate a new page with basic cubit
 
 ```bash
-mason make cubit_page
+mason make bloc_page
 ```
+
+> If you are using Visual Studio Code, you can run this script by pressing `Cmd + Shift + P` and type `Run Task` and select `mason: bloc_page`
