@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:dio/native_imp.dart';
+import 'package:dio/io.dart';
 import 'package:flutter_starter/services/oauth_token_manager/oauth_token_manager.dart';
 
 class NetworkDio extends DioForNative implements Interceptor {
@@ -16,7 +16,7 @@ class NetworkDio extends DioForNative implements Interceptor {
       baseUrl: baseUrl,
       headers: headers,
       contentType: 'application/json; charset=utf-8',
-      connectTimeout: 30000,
+      connectTimeout: const Duration(seconds: 30),
     );
 
     final instance = NetworkDio._(tokenManager, options);

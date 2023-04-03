@@ -3,5 +3,8 @@
     "AnUnknownErrorOccurred": "An unknown error occurred",
     "InvalidUsernameOrPassword": "Invalid username or password"
   },
-  "Hello": "Hello"
+  "Hello": "Hello",
+  "Username": "Username",
+  "Password": "Password",
+  "Login": "Login"
 }

@@ -5,5 +5,8 @@ abstract class  LocaleKeys {
   static const Errors_InvalidUsernameOrPassword = 'Errors.InvalidUsernameOrPassword';
   static const Errors = 'Errors';
   static const Hello = 'Hello';
+  static const Username = 'Username';
+  static const Password = 'Password';
+  static const Login = 'Login';
 
 }

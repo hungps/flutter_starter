@@ -24,7 +24,7 @@ class _NetworkDataSource implements NetworkDataSource {
     final queryParameters = <String, dynamic>{};
     queryParameters.addAll(params.toJson());
     final _headers = <String, dynamic>{};
-    final _data = <String, dynamic>{};
+    final Map<String, dynamic>? _data = null;
     final _result =
         await _dio.fetch<Map<String, dynamic>>(_setStreamType<Account>(Options(
       method: 'POST',
@@ -47,7 +47,7 @@ class _NetworkDataSource implements NetworkDataSource {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
-    final _data = <String, dynamic>{};
+    final Map<String, dynamic>? _data = null;
     final _result =
         await _dio.fetch<Map<String, dynamic>>(_setStreamType<Account>(Options(
       method: 'POST',

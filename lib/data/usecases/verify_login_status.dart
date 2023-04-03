@@ -10,7 +10,7 @@ class VerifyLoginStatus extends UseCase<Account, NoParams?> {
   const VerifyLoginStatus(this._authRepository);
 
   @override
-  FutureOr<Account> call(NoParams? params) {
+  FutureOr<Account> call([NoParams? params]) {
     return _authRepository.verifyLoginStatus();
   }
 }

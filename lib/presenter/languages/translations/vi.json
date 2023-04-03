@@ -3,5 +3,8 @@
     "AnUnknownErrorOccurred": "Lỗi không xác định",
     "InvalidUsernameOrPassword": "Tên đăng nhập hoặc mật khẩu không đúng"
   },
-  "Hello": "Xin chào"
+  "Hello": "Xin chào",
+  "Username": "Tên đăng nhập",
+  "Password": "Mật khẩu",
+  "Login": "Đăng nhập"
 }

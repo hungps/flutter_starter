@@ -2,7 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_config/flutter_config.dart';
-import 'package:flutter_starter/data/states/auth/auth_cubit.dart';
+import 'package:flutter_starter/data/states/auth/auth_bloc.dart';
 import 'package:flutter_starter/data/states/bloc_observer.dart';
 import 'package:flutter_starter/di.dart';
 import 'package:flutter_starter/presenter/app.dart';
@@ -20,7 +20,9 @@ void main() async {
 
   runApp(
     const AppLanguages(
-      child: App(),
+      child: GlobalBlocProviders(
+        child: App(),
+      ),
     ),
   );
 }
