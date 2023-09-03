@@ -44,7 +44,7 @@ class NetworkDio extends DioForNative implements Interceptor {
   }
 
   @override
-  void onError(DioError err, ErrorInterceptorHandler handler) async {
+  void onError(DioException err, ErrorInterceptorHandler handler) async {
     // TODO: Removing access token after logging out
     // if (!err.requestOptions.path.endsWith(NetworkUrls.login) && err.response?.statusCode == 401) {
     //   await _tokenManager.removeAllTokens();
