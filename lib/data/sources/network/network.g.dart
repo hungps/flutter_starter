@@ -19,7 +19,7 @@ class _NetworkDataSource implements NetworkDataSource {
   String? baseUrl;
 
   @override
-  Future<Account> login(params) async {
+  Future<Account> login(LoginParams params) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     queryParameters.addAll(params.toJson());
@@ -37,7 +37,11 @@ class _NetworkDataSource implements NetworkDataSource {
               queryParameters: queryParameters,
               data: _data,
             )
-            .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
     final value = Account.fromJson(_result.data!);
     return value;
   }
@@ -60,7 +64,11 @@ class _NetworkDataSource implements NetworkDataSource {
               queryParameters: queryParameters,
               data: _data,
             )
-            .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
     final value = Account.fromJson(_result.data!);
     return value;
   }
@@ -76,5 +84,22 @@ class _NetworkDataSource implements NetworkDataSource {
       }
     }
     return requestOptions;
+  }
+
+  String _combineBaseUrls(
+    String dioBaseUrl,
+    String? baseUrl,
+  ) {
+    if (baseUrl == null || baseUrl.trim().isEmpty) {
+      return dioBaseUrl;
+    }
+
+    final url = Uri.parse(baseUrl);
+
+    if (url.isAbsolute) {
+      return url.toString();
+    }
+
+    return Uri.parse(dioBaseUrl).resolveUri(url).toString();
   }
 }

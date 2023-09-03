@@ -21,7 +21,7 @@ class AppBlocObserver extends BlocObserver {
 
   @override
   void onError(BlocBase bloc, Object error, StackTrace stackTrace) {
-    if (error is DioError) {
+    if (error is DioException) {
       final statusCode = error.response?.statusCode;
 
       if (statusCode == 401) {
