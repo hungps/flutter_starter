@@ -13,6 +13,11 @@
     "editor.wordBasedSuggestions": false,
     "files.insertFinalNewline": true
   },
+  "triggerTaskOnSave.on": true,
+  "triggerTaskOnSave.showStatusBarToggle": true,
+  "triggerTaskOnSave.tasks": {
+    "easy_localization: generate keys": ["**/translations/*"]
+  },
   "search.exclude": {
     "**/.fvm": true,
     "**/build": true
@@ -26,6 +31,7 @@
     "**/*.g.dart": true,
     "**/*.gr.dart": true,
     "**/*.gen.dart": true,
-    "**/*.freezed.dart": true
+    "**/*.freezed.dart": true,
+    "**/*.config.dart": true
   }
 }
