@@ -1,6 +1,7 @@
 {
   "Errors": {
     "AnUnknownErrorOccurred": "An unknown error occurred",
+    "NetworkError": "Please check your internet connection",
     "InvalidUsernameOrPassword": "Invalid username or password"
   },
   "Hello": "Hello",

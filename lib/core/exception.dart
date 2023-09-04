@@ -1,11 +1,26 @@
+import 'package:dio/dio.dart';
 import 'package:flutter_starter/presenter/languages/translation_keys.g.dart';
 
-abstract class BaseException<T> implements Exception {
+abstract class BaseException<T> extends DioException implements Exception {
+  @override
+  // ignore: overridden_fields
   final String message;
   final String? code;
   final T? data;
 
-  const BaseException(this.message, {this.code, this.data});
+  BaseException(
+    this.message, {
+    this.code,
+    this.data,
+    super.response,
+    super.stackTrace,
+    super.type,
+    RequestOptions? requestOptions,
+  }) : super(
+          message: message,
+          error: data,
+          requestOptions: requestOptions ?? RequestOptions(path: ''),
+        );
 
   static BaseException from(Object? error) {
     return error is BaseException ? error : UnknownException(error);
@@ -23,6 +38,9 @@ abstract class BaseException<T> implements Exception {
 }
 
 class UnknownException extends BaseException {
-  const UnknownException(Object? error)
-      : super(LocaleKeys.Errors_AnUnknownErrorOccurred, data: error);
+  UnknownException([Object? error]) : super(LocaleKeys.Errors_AnUnknownErrorOccurred, data: error);
+}
+
+class NetworkException extends BaseException {
+  NetworkException() : super(LocaleKeys.Errors_NetworkError);
 }

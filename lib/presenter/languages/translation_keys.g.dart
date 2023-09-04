@@ -2,6 +2,7 @@
 
 abstract class  LocaleKeys {
   static const Errors_AnUnknownErrorOccurred = 'Errors.AnUnknownErrorOccurred';
+  static const Errors_NetworkError = 'Errors.NetworkError';
   static const Errors_InvalidUsernameOrPassword = 'Errors.InvalidUsernameOrPassword';
   static const Errors = 'Errors';
   static const Hello = 'Hello';

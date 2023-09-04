@@ -1,6 +1,7 @@
 {
   "Errors": {
     "AnUnknownErrorOccurred": "Lỗi không xác định",
+    "NetworkError": "Hãy kiểm tra kết nối mạng của bạn",
     "InvalidUsernameOrPassword": "Tên đăng nhập hoặc mật khẩu không đúng"
   },
   "Hello": "Xin chào",

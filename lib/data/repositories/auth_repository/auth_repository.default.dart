@@ -17,7 +17,7 @@ class DefaultAuthRepository extends AuthRepository {
     try {
       return await _networkDataSource.getCurrentAccount();
     } catch (e) {
-      throw const UnauthorizedException();
+      throw UnauthorizedException();
     }
   }
 
@@ -26,7 +26,7 @@ class DefaultAuthRepository extends AuthRepository {
     try {
       return await _networkDataSource.login(params);
     } catch (e) {
-      throw const LoginInvalidEmailPasswordException();
+      throw LoginInvalidEmailPasswordException();
     }
   }
 }
