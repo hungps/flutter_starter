@@ -1,3 +1,6 @@
+import 'dart:io';
+
+import 'package:flutter_starter/core/exception.dart';
 import 'package:injectable/injectable.dart';
 import 'package:dio/dio.dart';
 import 'package:dio/io.dart';
@@ -18,6 +21,8 @@ class NetworkDio extends DioForNative implements Interceptor {
       baseUrl: baseUrl,
       contentType: 'application/json; charset=utf-8',
       connectTimeout: const Duration(seconds: 30),
+      receiveTimeout: const Duration(seconds: 30),
+      sendTimeout: const Duration(minutes: 5),
     );
 
     final instance = NetworkDio._(tokenManager, options);
@@ -46,12 +51,29 @@ class NetworkDio extends DioForNative implements Interceptor {
 
   @override
   void onError(DioException err, ErrorInterceptorHandler handler) async {
-    // TODO: Removing access token after logging out
-    // if (!err.requestOptions.path.endsWith(NetworkUrls.login) && err.response?.statusCode == 401) {
-    //   await _tokenManager.removeAllTokens();
-    // }
+    final errorType = err.type;
+    final responseData = err.response?.data;
+
+    if (err.error is SocketException ||
+        errorType == DioExceptionType.connectionTimeout ||
+        errorType == DioExceptionType.receiveTimeout ||
+        errorType == DioExceptionType.sendTimeout) {
+      return handler.next(NetworkException());
+    }
+
+    if (responseData is! Map) {
+      return handler.next(err);
+    }
 
     // TODO: Refreshing the token when it expires
+
+    // TODO: Removing access token after logging out
+    // if (err.response?.statusCode == 401 || responseData['messageCode'] == UnauthorizedException.messageCode) {
+    //   await _tokenManager.removeAllTokens();
+    //   return handler.next(UnauthorizedException(data: err.response?.data));
+    // }
+
+    // TODO: Handling global exception, such as maintainance, etc.
 
     return handler.next(err);
   }
