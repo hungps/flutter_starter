@@ -1,17 +1,16 @@
+import 'package:injectable/injectable.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
+@singleton
 class LocalDataSource {
-  static const String _prefix = '@@app';
+  static const String _storagePrefix = '@@app';
 
-  final String key;
   final FlutterSecureStorage _storage;
 
-  const LocalDataSource._(this.key, this._storage);
+  const LocalDataSource({required FlutterSecureStorage flutterSecureStorage})
+      : _storage = flutterSecureStorage;
 
-  const LocalDataSource(FlutterSecureStorage storage, [String key = 'default'])
-      : this._(key, storage);
-
-  String get _initializedKey => "$_prefix/$key/initialized";
+  String get _initializedKey => "$_storagePrefix/initialized";
 
   Future<int?> getInitializedVersion() async {
     return await _storage

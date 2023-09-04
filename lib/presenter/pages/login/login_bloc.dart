@@ -6,11 +6,15 @@ import 'package:flutter_starter/core/exception.dart';
 import 'package:flutter_starter/data/usecases/login.dart';
 import 'package:flutter_starter/presenter/pages/login/login_event.dart';
 import 'package:flutter_starter/presenter/pages/login/login_state.dart';
+import 'package:injectable/injectable.dart';
 
+@injectable
 class LoginBloc extends Bloc<LoginEvent, LoginState> {
   final Login _login;
 
-  LoginBloc(this._login) : super(const LoginState()) {
+  LoginBloc({required Login login})
+      : _login = login,
+        super(const LoginState()) {
     on<LoginErrorOccurred>(_onErrorOccurred);
     on<LoginStarted>(_onLoginStarted, transformer: droppable());
   }

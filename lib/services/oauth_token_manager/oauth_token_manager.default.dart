@@ -1,19 +1,18 @@
+import 'package:injectable/injectable.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:flutter_starter/services/oauth_token_manager/oauth_token_manager.dart';
 
+@Singleton(as: OauthTokenManager)
 class DefaultOauthTokenManager extends OauthTokenManager {
-  static const String _prefix = '@@oauth-token';
+  static const String _storagePrefix = '@@oauth-token/default';
 
-  final String key;
   final FlutterSecureStorage _storage;
 
-  const DefaultOauthTokenManager._(this.key, this._storage);
+  const DefaultOauthTokenManager({required FlutterSecureStorage flutterSecureStorage})
+      : _storage = flutterSecureStorage;
 
-  const DefaultOauthTokenManager(FlutterSecureStorage storage, [String key = 'default'])
-      : this._(key, storage);
-
-  String get _accessTokenKey => "$_prefix/$key/accessToken";
-  String get _refreshTokenKey => "$_prefix/$key/refreshToken";
+  String get _accessTokenKey => "$_storagePrefix/accessToken";
+  String get _refreshTokenKey => "$_storagePrefix/refreshToken";
 
   @override
   Future<Map<String, dynamic>?> getAuthenticatedHeaders(Map<String, dynamic> headers) async {

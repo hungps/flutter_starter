@@ -14,7 +14,7 @@ void main() async {
   await FlutterConfig.loadEnvVariables();
   await EasyLocalization.ensureInitialized();
 
-  await injectDependencies();
+  await configureDependencies();
 
   Bloc.observer = AppBlocObserver(provider.get<AuthBloc>());
 

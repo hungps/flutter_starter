@@ -5,11 +5,16 @@ import 'package:flutter_starter/core/exception.dart';
 import 'package:flutter_starter/data/usecases/verify_login_status.dart';
 import 'package:flutter_starter/presenter/pages/splash/splash_event.dart';
 import 'package:flutter_starter/presenter/pages/splash/splash_state.dart';
+import 'package:injectable/injectable.dart';
 
+@injectable
 class SplashBloc extends Bloc<SplashEvent, SplashState> {
   final VerifyLoginStatus _verifyLoginStatus;
 
-  SplashBloc(this._verifyLoginStatus) : super(const SplashState()) {
+  SplashBloc({
+    required VerifyLoginStatus verifyLoginStatus,
+  })  : _verifyLoginStatus = verifyLoginStatus,
+        super(const SplashState()) {
     on<SplashErrorOccurred>(_onErrorOccurred);
     on<SplashVerifyLoginStatusStarted>(_onVerifyLoginStatusStarted);
   }

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_starter/data/states/auth/auth_bloc.dart';
 import 'package:flutter_starter/data/states/auth/auth_state.dart';
-import 'package:flutter_starter/data/states/theme/theme_bloc.dart';
+import 'package:flutter_starter/data/states/settings/settings_bloc.dart';
 import 'package:flutter_starter/env.dart';
 import 'package:flutter_starter/presenter/navigation/navigation.dart';
 
@@ -15,7 +15,7 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final appTheme = context.watch<ThemeBloc>().state;
+    final appTheme = context.watch<SettingsBloc>().state.theme;
 
     return MultiBlocListener(
       listeners: [

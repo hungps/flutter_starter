@@ -1,20 +1,21 @@
+import 'package:injectable/injectable.dart';
 import 'package:dio/dio.dart';
 import 'package:dio/io.dart';
 import 'package:flutter_starter/services/oauth_token_manager/oauth_token_manager.dart';
 
+@singleton
 class NetworkDio extends DioForNative implements Interceptor {
   final OauthTokenManager _tokenManager;
 
   NetworkDio._(this._tokenManager, BaseOptions options) : super(options);
 
+  @factoryMethod
   factory NetworkDio({
     required OauthTokenManager tokenManager,
-    required String baseUrl,
-    Map<String, dynamic> headers = const {},
+    @Named('baseUrl') required String baseUrl,
   }) {
     final BaseOptions options = BaseOptions(
       baseUrl: baseUrl,
-      headers: headers,
       contentType: 'application/json; charset=utf-8',
       connectTimeout: const Duration(seconds: 30),
     );
