@@ -91,16 +91,24 @@ class __$$_SettingsStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_SettingsState implements _SettingsState {
-  const _$_SettingsState({this.theme = AppTheme.defaultTheme});
+class _$_SettingsState with DiagnosticableTreeMixin implements _SettingsState {
+  const _$_SettingsState({this.theme = const LightAppTheme()});
 
   @override
   @JsonKey()
   final AppTheme theme;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'SettingsState(theme: $theme)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'SettingsState'))
+      ..add(DiagnosticsProperty('theme', theme));
   }
 
   @override

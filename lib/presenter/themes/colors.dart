@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class AppColors {
+class AppThemeColors {
   final MaterialColor primarySwatch;
   final Color primary;
   final Color secondary;
@@ -14,10 +14,11 @@ class AppColors {
   final Color warning;
   final Color error;
   final Color text;
+  final Color textOnPrimary;
   final Color border;
   final Color hint;
 
-  const AppColors({
+  const AppThemeColors({
     required this.primarySwatch,
     required this.primary,
     required this.secondary,
@@ -31,15 +32,16 @@ class AppColors {
     required this.warning,
     required this.error,
     required this.text,
+    required this.textOnPrimary,
     required this.border,
     required this.hint,
   });
 
-  AppColors lerp(covariant dynamic other, double t) {
-    if (other is! AppColors) {
+  AppThemeColors lerp(covariant dynamic other, double t) {
+    if (other is! AppThemeColors) {
       return this;
     }
-    return AppColors(
+    return AppThemeColors(
       primarySwatch: primarySwatch,
       primary: Color.lerp(primary, other.primary, t)!,
       secondary: Color.lerp(secondary, other.secondary, t)!,
@@ -53,8 +55,56 @@ class AppColors {
       warning: Color.lerp(warning, other.warning, t)!,
       error: Color.lerp(error, other.error, t)!,
       text: Color.lerp(text, other.text, t)!,
+      textOnPrimary: Color.lerp(textOnPrimary, other.textOnPrimary, t)!,
       border: Color.lerp(border, other.border, t)!,
       hint: Color.lerp(hint, other.hint, t)!,
     );
   }
+
+  AppThemeColors copyWith({
+    MaterialColor? primarySwatch,
+    Color? primary,
+    Color? secondary,
+    Color? accent,
+    Color? background,
+    Color? backgroundDark,
+    Color? disabled,
+    Color? information,
+    Color? success,
+    Color? alert,
+    Color? warning,
+    Color? error,
+    Color? text,
+    Color? textOnPrimary,
+    Color? border,
+    Color? hint,
+  }) {
+    return AppThemeColors(
+      primarySwatch: primarySwatch ?? this.primarySwatch,
+      primary: primary ?? this.primary,
+      secondary: secondary ?? this.secondary,
+      accent: accent ?? this.accent,
+      background: background ?? this.background,
+      backgroundDark: backgroundDark ?? this.backgroundDark,
+      disabled: disabled ?? this.disabled,
+      information: information ?? this.information,
+      success: success ?? this.success,
+      alert: alert ?? this.alert,
+      warning: warning ?? this.warning,
+      error: error ?? this.error,
+      text: text ?? this.text,
+      textOnPrimary: textOnPrimary ?? this.textOnPrimary,
+      border: border ?? this.border,
+      hint: hint ?? this.hint,
+    );
+  }
+}
+
+abstract class AppColors {
+  const AppColors._();
+
+  static const Color white = Colors.white;
+  static const Color black = Colors.black;
+  static const Color transparent = Colors.transparent;
+  static const Color red = Color(0xFFFA6555);
 }

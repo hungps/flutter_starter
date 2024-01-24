@@ -1,42 +1,80 @@
 import 'package:flutter/material.dart';
 
-class AppTypography {
-  final TextStyle title1;
-  final TextStyle headline1;
-  final TextStyle headline2;
-  final TextStyle body1;
-  final TextStyle body2;
-  final TextStyle body3;
-  final TextStyle caption1;
-  final TextStyle caption2;
-  final TextStyle button;
+class AppThemeTypography {
+  final TextStyle headingLarge;
+  final TextStyle heading;
+  final TextStyle headingSmall;
+  final TextStyle bodyExtraLarge;
+  final TextStyle bodyLarge;
+  final TextStyle body;
+  final TextStyle bodySmall;
+  final TextStyle bodyExtraSmall;
+  final TextStyle captionLarge;
+  final TextStyle caption;
+  final TextStyle captionSmall;
 
-  const AppTypography({
-    required this.title1,
-    required this.headline1,
-    required this.headline2,
-    required this.body1,
-    required this.body2,
-    required this.body3,
-    required this.caption1,
-    required this.caption2,
-    required this.button,
+  const AppThemeTypography({
+    this.headingLarge = const TextStyle(
+      fontSize: 32,
+      fontWeight: FontWeight.w900,
+    ),
+    this.heading = const TextStyle(
+      fontSize: 24,
+      fontWeight: FontWeight.w900,
+    ),
+    this.headingSmall = const TextStyle(
+      fontSize: 20,
+      fontWeight: FontWeight.w900,
+    ),
+    this.bodyExtraLarge = const TextStyle(
+      fontSize: 20,
+      fontWeight: FontWeight.w500,
+    ),
+    this.bodyLarge = const TextStyle(
+      fontSize: 18,
+      fontWeight: FontWeight.w500,
+    ),
+    this.body = const TextStyle(
+      fontSize: 16,
+      fontWeight: FontWeight.w400,
+    ),
+    this.bodySmall = const TextStyle(
+      fontSize: 14,
+      fontWeight: FontWeight.w400,
+    ),
+    this.bodyExtraSmall = const TextStyle(
+      fontSize: 12,
+      fontWeight: FontWeight.w400,
+    ),
+    this.captionLarge = const TextStyle(
+      fontSize: 14,
+      fontWeight: FontWeight.w700,
+    ),
+    this.caption = const TextStyle(
+      fontSize: 12,
+      fontWeight: FontWeight.w600,
+    ),
+    this.captionSmall = const TextStyle(
+      fontSize: 10,
+      fontWeight: FontWeight.w600,
+    ),
   });
 
-  AppTypography lerp(covariant dynamic other, double t) {
-    if (other is! AppTypography) {
-      return this;
-    }
-    return AppTypography(
-      title1: TextStyle.lerp(title1, other.title1, t)!,
-      headline1: TextStyle.lerp(headline1, other.headline1, t)!,
-      headline2: TextStyle.lerp(headline2, other.headline2, t)!,
-      body1: TextStyle.lerp(body1, other.body1, t)!,
-      body2: TextStyle.lerp(body2, other.body2, t)!,
-      body3: TextStyle.lerp(body3, other.body3, t)!,
-      caption1: TextStyle.lerp(caption1, other.caption1, t)!,
-      caption2: TextStyle.lerp(caption2, other.caption2, t)!,
-      button: TextStyle.lerp(button, other.button, t)!,
+  AppThemeTypography lerp(covariant dynamic other, double t) {
+    if (other is! AppThemeTypography) return this;
+
+    return AppThemeTypography(
+      headingLarge: TextStyle.lerp(headingLarge, other.headingLarge, t)!,
+      heading: TextStyle.lerp(heading, other.heading, t)!,
+      headingSmall: TextStyle.lerp(headingSmall, other.headingSmall, t)!,
+      bodyExtraLarge: TextStyle.lerp(bodyExtraLarge, other.bodyExtraLarge, t)!,
+      bodyLarge: TextStyle.lerp(bodyLarge, other.bodyLarge, t)!,
+      body: TextStyle.lerp(body, other.body, t)!,
+      bodySmall: TextStyle.lerp(bodySmall, other.bodySmall, t)!,
+      bodyExtraSmall: TextStyle.lerp(bodyExtraSmall, other.bodyExtraSmall, t)!,
+      captionLarge: TextStyle.lerp(captionLarge, other.captionLarge, t)!,
+      caption: TextStyle.lerp(caption, other.caption, t)!,
+      captionSmall: TextStyle.lerp(captionSmall, other.captionSmall, t)!,
     );
   }
 }

@@ -10,6 +10,7 @@ import 'package:flutter_starter/presenter/pages/login/login_bloc.dart';
 import 'package:flutter_starter/presenter/pages/login/login_event.dart';
 import 'package:flutter_starter/presenter/pages/login/login_selector.dart';
 import 'package:flutter_starter/presenter/pages/login/login_state.dart';
+import 'package:flutter_starter/presenter/themes/extensions.dart';
 
 @RoutePage()
 class LoginPage extends StatefulWidget {
@@ -49,7 +50,7 @@ class _LoginPageState extends State<LoginPage> {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text(tr(state.error!.message)),
-        backgroundColor: Colors.red,
+        backgroundColor: context.colors.error,
       ),
     );
   }
@@ -78,12 +79,12 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   const SizedBox(height: 24),
                   TextField(
-                    decoration: InputDecoration(labelText: tr(LocaleKeys.Username)),
+                    decoration: InputDecoration(hintText: tr(LocaleKeys.Username)),
                     onChanged: (value) => username = value,
                   ),
                   const SizedBox(height: 16),
                   TextField(
-                    decoration: InputDecoration(labelText: tr(LocaleKeys.Password)),
+                    decoration: InputDecoration(hintText: tr(LocaleKeys.Password)),
                     obscureText: true,
                     onChanged: (value) => password = value,
                   ),
