@@ -74,10 +74,10 @@ class _$AuthEventCopyWithImpl<$Res, $Val extends AuthEvent>
 }
 
 /// @nodoc
-abstract class _$$AuthLoggedInCopyWith<$Res> {
-  factory _$$AuthLoggedInCopyWith(
-          _$AuthLoggedIn value, $Res Function(_$AuthLoggedIn) then) =
-      __$$AuthLoggedInCopyWithImpl<$Res>;
+abstract class _$$AuthLoggedInImplCopyWith<$Res> {
+  factory _$$AuthLoggedInImplCopyWith(
+          _$AuthLoggedInImpl value, $Res Function(_$AuthLoggedInImpl) then) =
+      __$$AuthLoggedInImplCopyWithImpl<$Res>;
   @useResult
   $Res call({Account account});
 
@@ -85,11 +85,11 @@ abstract class _$$AuthLoggedInCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$AuthLoggedInCopyWithImpl<$Res>
-    extends _$AuthEventCopyWithImpl<$Res, _$AuthLoggedIn>
-    implements _$$AuthLoggedInCopyWith<$Res> {
-  __$$AuthLoggedInCopyWithImpl(
-      _$AuthLoggedIn _value, $Res Function(_$AuthLoggedIn) _then)
+class __$$AuthLoggedInImplCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$AuthLoggedInImpl>
+    implements _$$AuthLoggedInImplCopyWith<$Res> {
+  __$$AuthLoggedInImplCopyWithImpl(
+      _$AuthLoggedInImpl _value, $Res Function(_$AuthLoggedInImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -97,7 +97,7 @@ class __$$AuthLoggedInCopyWithImpl<$Res>
   $Res call({
     Object? account = null,
   }) {
-    return _then(_$AuthLoggedIn(
+    return _then(_$AuthLoggedInImpl(
       null == account
           ? _value.account
           : account // ignore: cast_nullable_to_non_nullable
@@ -116,8 +116,8 @@ class __$$AuthLoggedInCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$AuthLoggedIn implements AuthLoggedIn {
-  const _$AuthLoggedIn(this.account);
+class _$AuthLoggedInImpl implements AuthLoggedIn {
+  const _$AuthLoggedInImpl(this.account);
 
   @override
   final Account account;
@@ -128,10 +128,10 @@ class _$AuthLoggedIn implements AuthLoggedIn {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$AuthLoggedIn &&
+            other is _$AuthLoggedInImpl &&
             (identical(other.account, account) || other.account == account));
   }
 
@@ -141,8 +141,8 @@ class _$AuthLoggedIn implements AuthLoggedIn {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$AuthLoggedInCopyWith<_$AuthLoggedIn> get copyWith =>
-      __$$AuthLoggedInCopyWithImpl<_$AuthLoggedIn>(this, _$identity);
+  _$$AuthLoggedInImplCopyWith<_$AuthLoggedInImpl> get copyWith =>
+      __$$AuthLoggedInImplCopyWithImpl<_$AuthLoggedInImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -208,29 +208,29 @@ class _$AuthLoggedIn implements AuthLoggedIn {
 }
 
 abstract class AuthLoggedIn implements AuthEvent {
-  const factory AuthLoggedIn(final Account account) = _$AuthLoggedIn;
+  const factory AuthLoggedIn(final Account account) = _$AuthLoggedInImpl;
 
   Account get account;
   @JsonKey(ignore: true)
-  _$$AuthLoggedInCopyWith<_$AuthLoggedIn> get copyWith =>
+  _$$AuthLoggedInImplCopyWith<_$AuthLoggedInImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$AuthLoggedOutCopyWith<$Res> {
-  factory _$$AuthLoggedOutCopyWith(
-          _$AuthLoggedOut value, $Res Function(_$AuthLoggedOut) then) =
-      __$$AuthLoggedOutCopyWithImpl<$Res>;
+abstract class _$$AuthLoggedOutImplCopyWith<$Res> {
+  factory _$$AuthLoggedOutImplCopyWith(
+          _$AuthLoggedOutImpl value, $Res Function(_$AuthLoggedOutImpl) then) =
+      __$$AuthLoggedOutImplCopyWithImpl<$Res>;
   @useResult
   $Res call({Exception? error});
 }
 
 /// @nodoc
-class __$$AuthLoggedOutCopyWithImpl<$Res>
-    extends _$AuthEventCopyWithImpl<$Res, _$AuthLoggedOut>
-    implements _$$AuthLoggedOutCopyWith<$Res> {
-  __$$AuthLoggedOutCopyWithImpl(
-      _$AuthLoggedOut _value, $Res Function(_$AuthLoggedOut) _then)
+class __$$AuthLoggedOutImplCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$AuthLoggedOutImpl>
+    implements _$$AuthLoggedOutImplCopyWith<$Res> {
+  __$$AuthLoggedOutImplCopyWithImpl(
+      _$AuthLoggedOutImpl _value, $Res Function(_$AuthLoggedOutImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -238,7 +238,7 @@ class __$$AuthLoggedOutCopyWithImpl<$Res>
   $Res call({
     Object? error = freezed,
   }) {
-    return _then(_$AuthLoggedOut(
+    return _then(_$AuthLoggedOutImpl(
       freezed == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
@@ -249,8 +249,8 @@ class __$$AuthLoggedOutCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$AuthLoggedOut implements AuthLoggedOut {
-  const _$AuthLoggedOut([this.error]);
+class _$AuthLoggedOutImpl implements AuthLoggedOut {
+  const _$AuthLoggedOutImpl([this.error]);
 
   @override
   final Exception? error;
@@ -261,10 +261,10 @@ class _$AuthLoggedOut implements AuthLoggedOut {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$AuthLoggedOut &&
+            other is _$AuthLoggedOutImpl &&
             (identical(other.error, error) || other.error == error));
   }
 
@@ -274,8 +274,8 @@ class _$AuthLoggedOut implements AuthLoggedOut {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$AuthLoggedOutCopyWith<_$AuthLoggedOut> get copyWith =>
-      __$$AuthLoggedOutCopyWithImpl<_$AuthLoggedOut>(this, _$identity);
+  _$$AuthLoggedOutImplCopyWith<_$AuthLoggedOutImpl> get copyWith =>
+      __$$AuthLoggedOutImplCopyWithImpl<_$AuthLoggedOutImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -341,10 +341,10 @@ class _$AuthLoggedOut implements AuthLoggedOut {
 }
 
 abstract class AuthLoggedOut implements AuthEvent {
-  const factory AuthLoggedOut([final Exception? error]) = _$AuthLoggedOut;
+  const factory AuthLoggedOut([final Exception? error]) = _$AuthLoggedOutImpl;
 
   Exception? get error;
   @JsonKey(ignore: true)
-  _$$AuthLoggedOutCopyWith<_$AuthLoggedOut> get copyWith =>
+  _$$AuthLoggedOutImplCopyWith<_$AuthLoggedOutImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

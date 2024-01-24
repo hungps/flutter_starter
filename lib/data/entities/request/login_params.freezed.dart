@@ -72,11 +72,11 @@ class _$LoginParamsCopyWithImpl<$Res, $Val extends LoginParams>
 }
 
 /// @nodoc
-abstract class _$$_LoginParamsCopyWith<$Res>
+abstract class _$$LoginParamsImplCopyWith<$Res>
     implements $LoginParamsCopyWith<$Res> {
-  factory _$$_LoginParamsCopyWith(
-          _$_LoginParams value, $Res Function(_$_LoginParams) then) =
-      __$$_LoginParamsCopyWithImpl<$Res>;
+  factory _$$LoginParamsImplCopyWith(
+          _$LoginParamsImpl value, $Res Function(_$LoginParamsImpl) then) =
+      __$$LoginParamsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -85,11 +85,11 @@ abstract class _$$_LoginParamsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_LoginParamsCopyWithImpl<$Res>
-    extends _$LoginParamsCopyWithImpl<$Res, _$_LoginParams>
-    implements _$$_LoginParamsCopyWith<$Res> {
-  __$$_LoginParamsCopyWithImpl(
-      _$_LoginParams _value, $Res Function(_$_LoginParams) _then)
+class __$$LoginParamsImplCopyWithImpl<$Res>
+    extends _$LoginParamsCopyWithImpl<$Res, _$LoginParamsImpl>
+    implements _$$LoginParamsImplCopyWith<$Res> {
+  __$$LoginParamsImplCopyWithImpl(
+      _$LoginParamsImpl _value, $Res Function(_$LoginParamsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -98,7 +98,7 @@ class __$$_LoginParamsCopyWithImpl<$Res>
     Object? username = null,
     Object? password = null,
   }) {
-    return _then(_$_LoginParams(
+    return _then(_$LoginParamsImpl(
       username: null == username
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
@@ -113,13 +113,13 @@ class __$$_LoginParamsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_LoginParams with DiagnosticableTreeMixin implements _LoginParams {
-  const _$_LoginParams(
+class _$LoginParamsImpl with DiagnosticableTreeMixin implements _LoginParams {
+  const _$LoginParamsImpl(
       {@JsonKey(name: 'username') required this.username,
       @JsonKey(name: 'password') required this.password});
 
-  factory _$_LoginParams.fromJson(Map<String, dynamic> json) =>
-      _$$_LoginParamsFromJson(json);
+  factory _$LoginParamsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$LoginParamsImplFromJson(json);
 
   @override
   @JsonKey(name: 'username')
@@ -143,10 +143,10 @@ class _$_LoginParams with DiagnosticableTreeMixin implements _LoginParams {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LoginParams &&
+            other is _$LoginParamsImpl &&
             (identical(other.username, username) ||
                 other.username == username) &&
             (identical(other.password, password) ||
@@ -160,12 +160,12 @@ class _$_LoginParams with DiagnosticableTreeMixin implements _LoginParams {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LoginParamsCopyWith<_$_LoginParams> get copyWith =>
-      __$$_LoginParamsCopyWithImpl<_$_LoginParams>(this, _$identity);
+  _$$LoginParamsImplCopyWith<_$LoginParamsImpl> get copyWith =>
+      __$$LoginParamsImplCopyWithImpl<_$LoginParamsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_LoginParamsToJson(
+    return _$$LoginParamsImplToJson(
       this,
     );
   }
@@ -175,10 +175,10 @@ abstract class _LoginParams implements LoginParams {
   const factory _LoginParams(
           {@JsonKey(name: 'username') required final String username,
           @JsonKey(name: 'password') required final String password}) =
-      _$_LoginParams;
+      _$LoginParamsImpl;
 
   factory _LoginParams.fromJson(Map<String, dynamic> json) =
-      _$_LoginParams.fromJson;
+      _$LoginParamsImpl.fromJson;
 
   @override
   @JsonKey(name: 'username')
@@ -188,6 +188,6 @@ abstract class _LoginParams implements LoginParams {
   String get password;
   @override
   @JsonKey(ignore: true)
-  _$$_LoginParamsCopyWith<_$_LoginParams> get copyWith =>
+  _$$LoginParamsImplCopyWith<_$LoginParamsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

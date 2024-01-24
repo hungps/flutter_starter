@@ -89,22 +89,22 @@ class _$SettingsEventCopyWithImpl<$Res, $Val extends SettingsEvent>
 }
 
 /// @nodoc
-abstract class _$$SettingsThemeChangedCopyWith<$Res>
+abstract class _$$SettingsThemeChangedImplCopyWith<$Res>
     implements $SettingsEventCopyWith<$Res> {
-  factory _$$SettingsThemeChangedCopyWith(_$SettingsThemeChanged value,
-          $Res Function(_$SettingsThemeChanged) then) =
-      __$$SettingsThemeChangedCopyWithImpl<$Res>;
+  factory _$$SettingsThemeChangedImplCopyWith(_$SettingsThemeChangedImpl value,
+          $Res Function(_$SettingsThemeChangedImpl) then) =
+      __$$SettingsThemeChangedImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({AppTheme theme});
 }
 
 /// @nodoc
-class __$$SettingsThemeChangedCopyWithImpl<$Res>
-    extends _$SettingsEventCopyWithImpl<$Res, _$SettingsThemeChanged>
-    implements _$$SettingsThemeChangedCopyWith<$Res> {
-  __$$SettingsThemeChangedCopyWithImpl(_$SettingsThemeChanged _value,
-      $Res Function(_$SettingsThemeChanged) _then)
+class __$$SettingsThemeChangedImplCopyWithImpl<$Res>
+    extends _$SettingsEventCopyWithImpl<$Res, _$SettingsThemeChangedImpl>
+    implements _$$SettingsThemeChangedImplCopyWith<$Res> {
+  __$$SettingsThemeChangedImplCopyWithImpl(_$SettingsThemeChangedImpl _value,
+      $Res Function(_$SettingsThemeChangedImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -112,7 +112,7 @@ class __$$SettingsThemeChangedCopyWithImpl<$Res>
   $Res call({
     Object? theme = null,
   }) {
-    return _then(_$SettingsThemeChanged(
+    return _then(_$SettingsThemeChangedImpl(
       null == theme
           ? _value.theme
           : theme // ignore: cast_nullable_to_non_nullable
@@ -123,8 +123,8 @@ class __$$SettingsThemeChangedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$SettingsThemeChanged implements SettingsThemeChanged {
-  const _$SettingsThemeChanged(this.theme);
+class _$SettingsThemeChangedImpl implements SettingsThemeChanged {
+  const _$SettingsThemeChangedImpl(this.theme);
 
   @override
   final AppTheme theme;
@@ -135,10 +135,10 @@ class _$SettingsThemeChanged implements SettingsThemeChanged {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SettingsThemeChanged &&
+            other is _$SettingsThemeChangedImpl &&
             (identical(other.theme, theme) || other.theme == theme));
   }
 
@@ -148,9 +148,10 @@ class _$SettingsThemeChanged implements SettingsThemeChanged {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$SettingsThemeChangedCopyWith<_$SettingsThemeChanged> get copyWith =>
-      __$$SettingsThemeChangedCopyWithImpl<_$SettingsThemeChanged>(
-          this, _$identity);
+  _$$SettingsThemeChangedImplCopyWith<_$SettingsThemeChangedImpl>
+      get copyWith =>
+          __$$SettingsThemeChangedImplCopyWithImpl<_$SettingsThemeChangedImpl>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -211,12 +212,12 @@ class _$SettingsThemeChanged implements SettingsThemeChanged {
 
 abstract class SettingsThemeChanged implements SettingsEvent {
   const factory SettingsThemeChanged(final AppTheme theme) =
-      _$SettingsThemeChanged;
+      _$SettingsThemeChangedImpl;
 
   @override
   AppTheme get theme;
   @override
   @JsonKey(ignore: true)
-  _$$SettingsThemeChangedCopyWith<_$SettingsThemeChanged> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$SettingsThemeChangedImplCopyWith<_$SettingsThemeChangedImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

@@ -57,22 +57,22 @@ class _$SettingsStateCopyWithImpl<$Res, $Val extends SettingsState>
 }
 
 /// @nodoc
-abstract class _$$_SettingsStateCopyWith<$Res>
+abstract class _$$SettingsStateImplCopyWith<$Res>
     implements $SettingsStateCopyWith<$Res> {
-  factory _$$_SettingsStateCopyWith(
-          _$_SettingsState value, $Res Function(_$_SettingsState) then) =
-      __$$_SettingsStateCopyWithImpl<$Res>;
+  factory _$$SettingsStateImplCopyWith(
+          _$SettingsStateImpl value, $Res Function(_$SettingsStateImpl) then) =
+      __$$SettingsStateImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({AppTheme theme});
 }
 
 /// @nodoc
-class __$$_SettingsStateCopyWithImpl<$Res>
-    extends _$SettingsStateCopyWithImpl<$Res, _$_SettingsState>
-    implements _$$_SettingsStateCopyWith<$Res> {
-  __$$_SettingsStateCopyWithImpl(
-      _$_SettingsState _value, $Res Function(_$_SettingsState) _then)
+class __$$SettingsStateImplCopyWithImpl<$Res>
+    extends _$SettingsStateCopyWithImpl<$Res, _$SettingsStateImpl>
+    implements _$$SettingsStateImplCopyWith<$Res> {
+  __$$SettingsStateImplCopyWithImpl(
+      _$SettingsStateImpl _value, $Res Function(_$SettingsStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -80,7 +80,7 @@ class __$$_SettingsStateCopyWithImpl<$Res>
   $Res call({
     Object? theme = null,
   }) {
-    return _then(_$_SettingsState(
+    return _then(_$SettingsStateImpl(
       theme: null == theme
           ? _value.theme
           : theme // ignore: cast_nullable_to_non_nullable
@@ -91,8 +91,10 @@ class __$$_SettingsStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_SettingsState with DiagnosticableTreeMixin implements _SettingsState {
-  const _$_SettingsState({this.theme = const LightAppTheme()});
+class _$SettingsStateImpl
+    with DiagnosticableTreeMixin
+    implements _SettingsState {
+  const _$SettingsStateImpl({this.theme = const LightAppTheme()});
 
   @override
   @JsonKey()
@@ -112,10 +114,10 @@ class _$_SettingsState with DiagnosticableTreeMixin implements _SettingsState {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SettingsState &&
+            other is _$SettingsStateImpl &&
             (identical(other.theme, theme) || other.theme == theme));
   }
 
@@ -125,17 +127,17 @@ class _$_SettingsState with DiagnosticableTreeMixin implements _SettingsState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SettingsStateCopyWith<_$_SettingsState> get copyWith =>
-      __$$_SettingsStateCopyWithImpl<_$_SettingsState>(this, _$identity);
+  _$$SettingsStateImplCopyWith<_$SettingsStateImpl> get copyWith =>
+      __$$SettingsStateImplCopyWithImpl<_$SettingsStateImpl>(this, _$identity);
 }
 
 abstract class _SettingsState implements SettingsState {
-  const factory _SettingsState({final AppTheme theme}) = _$_SettingsState;
+  const factory _SettingsState({final AppTheme theme}) = _$SettingsStateImpl;
 
   @override
   AppTheme get theme;
   @override
   @JsonKey(ignore: true)
-  _$$_SettingsStateCopyWith<_$_SettingsState> get copyWith =>
+  _$$SettingsStateImplCopyWith<_$SettingsStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

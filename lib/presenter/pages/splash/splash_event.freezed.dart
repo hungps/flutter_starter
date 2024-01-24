@@ -78,28 +78,29 @@ class _$SplashEventCopyWithImpl<$Res, $Val extends SplashEvent>
 }
 
 /// @nodoc
-abstract class _$$SplashVerifyLoginStatusStartedCopyWith<$Res> {
-  factory _$$SplashVerifyLoginStatusStartedCopyWith(
-          _$SplashVerifyLoginStatusStarted value,
-          $Res Function(_$SplashVerifyLoginStatusStarted) then) =
-      __$$SplashVerifyLoginStatusStartedCopyWithImpl<$Res>;
+abstract class _$$SplashVerifyLoginStatusStartedImplCopyWith<$Res> {
+  factory _$$SplashVerifyLoginStatusStartedImplCopyWith(
+          _$SplashVerifyLoginStatusStartedImpl value,
+          $Res Function(_$SplashVerifyLoginStatusStartedImpl) then) =
+      __$$SplashVerifyLoginStatusStartedImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$SplashVerifyLoginStatusStartedCopyWithImpl<$Res>
-    extends _$SplashEventCopyWithImpl<$Res, _$SplashVerifyLoginStatusStarted>
-    implements _$$SplashVerifyLoginStatusStartedCopyWith<$Res> {
-  __$$SplashVerifyLoginStatusStartedCopyWithImpl(
-      _$SplashVerifyLoginStatusStarted _value,
-      $Res Function(_$SplashVerifyLoginStatusStarted) _then)
+class __$$SplashVerifyLoginStatusStartedImplCopyWithImpl<$Res>
+    extends _$SplashEventCopyWithImpl<$Res,
+        _$SplashVerifyLoginStatusStartedImpl>
+    implements _$$SplashVerifyLoginStatusStartedImplCopyWith<$Res> {
+  __$$SplashVerifyLoginStatusStartedImplCopyWithImpl(
+      _$SplashVerifyLoginStatusStartedImpl _value,
+      $Res Function(_$SplashVerifyLoginStatusStartedImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$SplashVerifyLoginStatusStarted
+class _$SplashVerifyLoginStatusStartedImpl
     implements SplashVerifyLoginStatusStarted {
-  const _$SplashVerifyLoginStatusStarted();
+  const _$SplashVerifyLoginStatusStartedImpl();
 
   @override
   String toString() {
@@ -107,10 +108,10 @@ class _$SplashVerifyLoginStatusStarted
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SplashVerifyLoginStatusStarted);
+            other is _$SplashVerifyLoginStatusStartedImpl);
   }
 
   @override
@@ -184,24 +185,24 @@ class _$SplashVerifyLoginStatusStarted
 
 abstract class SplashVerifyLoginStatusStarted implements SplashEvent {
   const factory SplashVerifyLoginStatusStarted() =
-      _$SplashVerifyLoginStatusStarted;
+      _$SplashVerifyLoginStatusStartedImpl;
 }
 
 /// @nodoc
-abstract class _$$SplashErrorOccurredCopyWith<$Res> {
-  factory _$$SplashErrorOccurredCopyWith(_$SplashErrorOccurred value,
-          $Res Function(_$SplashErrorOccurred) then) =
-      __$$SplashErrorOccurredCopyWithImpl<$Res>;
+abstract class _$$SplashErrorOccurredImplCopyWith<$Res> {
+  factory _$$SplashErrorOccurredImplCopyWith(_$SplashErrorOccurredImpl value,
+          $Res Function(_$SplashErrorOccurredImpl) then) =
+      __$$SplashErrorOccurredImplCopyWithImpl<$Res>;
   @useResult
   $Res call({BaseException<dynamic>? error});
 }
 
 /// @nodoc
-class __$$SplashErrorOccurredCopyWithImpl<$Res>
-    extends _$SplashEventCopyWithImpl<$Res, _$SplashErrorOccurred>
-    implements _$$SplashErrorOccurredCopyWith<$Res> {
-  __$$SplashErrorOccurredCopyWithImpl(
-      _$SplashErrorOccurred _value, $Res Function(_$SplashErrorOccurred) _then)
+class __$$SplashErrorOccurredImplCopyWithImpl<$Res>
+    extends _$SplashEventCopyWithImpl<$Res, _$SplashErrorOccurredImpl>
+    implements _$$SplashErrorOccurredImplCopyWith<$Res> {
+  __$$SplashErrorOccurredImplCopyWithImpl(_$SplashErrorOccurredImpl _value,
+      $Res Function(_$SplashErrorOccurredImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -209,7 +210,7 @@ class __$$SplashErrorOccurredCopyWithImpl<$Res>
   $Res call({
     Object? error = freezed,
   }) {
-    return _then(_$SplashErrorOccurred(
+    return _then(_$SplashErrorOccurredImpl(
       freezed == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
@@ -220,8 +221,8 @@ class __$$SplashErrorOccurredCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$SplashErrorOccurred implements SplashErrorOccurred {
-  const _$SplashErrorOccurred([this.error]);
+class _$SplashErrorOccurredImpl implements SplashErrorOccurred {
+  const _$SplashErrorOccurredImpl([this.error]);
 
   @override
   final BaseException<dynamic>? error;
@@ -232,10 +233,10 @@ class _$SplashErrorOccurred implements SplashErrorOccurred {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SplashErrorOccurred &&
+            other is _$SplashErrorOccurredImpl &&
             (identical(other.error, error) || other.error == error));
   }
 
@@ -245,8 +246,8 @@ class _$SplashErrorOccurred implements SplashErrorOccurred {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$SplashErrorOccurredCopyWith<_$SplashErrorOccurred> get copyWith =>
-      __$$SplashErrorOccurredCopyWithImpl<_$SplashErrorOccurred>(
+  _$$SplashErrorOccurredImplCopyWith<_$SplashErrorOccurredImpl> get copyWith =>
+      __$$SplashErrorOccurredImplCopyWithImpl<_$SplashErrorOccurredImpl>(
           this, _$identity);
 
   @override
@@ -317,10 +318,10 @@ class _$SplashErrorOccurred implements SplashErrorOccurred {
 
 abstract class SplashErrorOccurred implements SplashEvent {
   const factory SplashErrorOccurred([final BaseException<dynamic>? error]) =
-      _$SplashErrorOccurred;
+      _$SplashErrorOccurredImpl;
 
   BaseException<dynamic>? get error;
   @JsonKey(ignore: true)
-  _$$SplashErrorOccurredCopyWith<_$SplashErrorOccurred> get copyWith =>
+  _$$SplashErrorOccurredImplCopyWith<_$SplashErrorOccurredImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
