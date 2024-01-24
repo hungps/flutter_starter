@@ -15,7 +15,7 @@ abstract class NetworkDataSource {
   factory NetworkDataSource(NetworkDio dio) = _NetworkDataSource;
 
   @POST(NetworkUrls.login)
-  Future<Account> login(@Queries() LoginParams params);
+  Future<Account> login(@Body() LoginParams params);
 
   @POST(NetworkUrls.usersMe)
   Future<Account> getCurrentAccount();

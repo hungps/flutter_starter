@@ -1,3 +1,4 @@
+import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
 import 'package:flutter_starter/data/entities/account.dart';
 import 'package:flutter_starter/data/entities/request/login_params.dart';
@@ -9,8 +10,9 @@ import 'package:flutter_starter/data/sources/network/network.dart';
 class DefaultAuthRepository extends AuthRepository {
   final NetworkDataSource _networkDataSource;
 
-  DefaultAuthRepository({required NetworkDataSource networkDataSource})
-      : _networkDataSource = networkDataSource;
+  DefaultAuthRepository({
+    required NetworkDataSource networkDataSource,
+  }) : _networkDataSource = networkDataSource;
 
   @override
   Future<Account> verifyLoginStatus() async {
@@ -22,10 +24,18 @@ class DefaultAuthRepository extends AuthRepository {
   }
 
   @override
-  Future<Account> login(LoginParams params) async {
+  Future<Account> login({
+    required String username,
+    required String password,
+  }) async {
     try {
-      return await _networkDataSource.login(params);
-    } catch (e) {
+      final account = await _networkDataSource.login(LoginParams(
+        username: username,
+        password: password,
+      ));
+
+      return account;
+    } on DioException {
       throw LoginInvalidEmailPasswordException();
     }
   }

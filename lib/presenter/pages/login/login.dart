@@ -2,7 +2,6 @@ import 'package:auto_route/auto_route.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_starter/data/entities/request/login_params.dart';
 import 'package:flutter_starter/di.dart';
 import 'package:flutter_starter/presenter/languages/translation_keys.g.dart';
 import 'package:flutter_starter/presenter/navigation/navigation.dart';
@@ -11,6 +10,7 @@ import 'package:flutter_starter/presenter/pages/login/login_event.dart';
 import 'package:flutter_starter/presenter/pages/login/login_selector.dart';
 import 'package:flutter_starter/presenter/pages/login/login_state.dart';
 import 'package:flutter_starter/presenter/themes/extensions.dart';
+import 'package:flutter_starter/presenter/widgets/loading_indicator.dart';
 
 @RoutePage()
 class LoginPage extends StatefulWidget {
@@ -23,21 +23,11 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   final LoginBloc _bloc = provider.get<LoginBloc>();
 
-  String username = '';
-  String password = '';
-
   @override
   void dispose() {
     _bloc.close();
 
     super.dispose();
-  }
-
-  void _onLoginPressed() {
-    _bloc.add(LoginStarted(LoginParams(
-      username: username,
-      password: password,
-    )));
   }
 
   void _onSuccess(BuildContext context, LoginState state) {
@@ -53,6 +43,18 @@ class _LoginPageState extends State<LoginPage> {
         backgroundColor: context.colors.error,
       ),
     );
+  }
+
+  void _onUsernameChanged(String username) {
+    _bloc.add(LoginUsernameChanged(username));
+  }
+
+  void _onPasswordChanged(String password) {
+    _bloc.add(LoginPasswordChanged(password));
+  }
+
+  void _onLoginPressed() {
+    _bloc.add(const LoginStarted());
   }
 
   @override
@@ -75,28 +77,31 @@ class _LoginPageState extends State<LoginPage> {
                   Text(
                     tr(LocaleKeys.Login),
                     textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.headlineSmall,
+                    style: context.typographies.heading,
                   ),
                   const SizedBox(height: 24),
                   TextField(
-                    decoration: InputDecoration(hintText: tr(LocaleKeys.Username)),
-                    onChanged: (value) => username = value,
+                    decoration: InputDecoration(
+                      prefixIcon: const Icon(Icons.person),
+                      hintText: tr(LocaleKeys.Username),
+                    ),
+                    onChanged: _onUsernameChanged,
                   ),
                   const SizedBox(height: 16),
                   TextField(
-                    decoration: InputDecoration(hintText: tr(LocaleKeys.Password)),
+                    decoration: InputDecoration(
+                      prefixIcon: const Icon(Icons.lock),
+                      hintText: tr(LocaleKeys.Password),
+                    ),
                     obscureText: true,
-                    onChanged: (value) => password = value,
+                    onChanged: _onPasswordChanged,
                   ),
                   const SizedBox(height: 16),
                   LoginStatusSelector(
                     builder: (status) => FilledButton(
                       onPressed: _onLoginPressed,
-                      child: status == LoginStatus.loading
-                          ? const SizedBox.square(
-                              dimension: 24,
-                              child: CircularProgressIndicator(color: Colors.white),
-                            )
+                      child: status == LoginStatus.submitting
+                          ? const AppFilledButtonLoadingIndicator()
                           : Text(tr(LocaleKeys.Login)),
                     ),
                   ),

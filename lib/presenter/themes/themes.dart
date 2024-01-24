@@ -125,8 +125,8 @@ class AppTheme extends ThemeExtension<AppTheme> {
             borderRadius: BorderRadius.circular(100),
             borderSide: BorderSide.none,
           ),
-          prefixIconColor: colors.text,
-          suffixIconColor: colors.text,
+          // prefixIconColor: colors.text,
+          // suffixIconColor: colors.text,
         ),
         checkboxTheme: CheckboxThemeData(
           visualDensity: const VisualDensity(horizontal: -4, vertical: -4),

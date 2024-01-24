@@ -6,7 +6,7 @@ part 'login_state.freezed.dart';
 
 enum LoginStatus {
   initial,
-  loading,
+  submitting,
   success,
   failure,
 }
@@ -16,6 +16,8 @@ class LoginState with _$LoginState {
   const factory LoginState({
     @Default(LoginStatus.initial) LoginStatus status,
     Account? account,
+    @Default('') String username,
+    @Default('') String password,
     BaseException? error,
   }) = _LoginState;
 }

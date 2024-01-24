@@ -9,8 +9,9 @@ import 'package:flutter_starter/data/repositories/auth_repository/auth_repositor
 class VerifyLoginStatus extends UseCase<Account, NoParams?> {
   final AuthRepository _authRepository;
 
-  const VerifyLoginStatus({required AuthRepository authRepository})
-      : _authRepository = authRepository;
+  const VerifyLoginStatus({
+    required AuthRepository authRepository,
+  }) : _authRepository = authRepository;
 
   @override
   FutureOr<Account> call([NoParams? params]) {

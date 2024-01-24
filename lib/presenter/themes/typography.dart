@@ -16,15 +16,15 @@ class AppThemeTypography {
   const AppThemeTypography({
     this.headingLarge = const TextStyle(
       fontSize: 32,
-      fontWeight: FontWeight.w900,
+      fontWeight: FontWeight.w500,
     ),
     this.heading = const TextStyle(
       fontSize: 24,
-      fontWeight: FontWeight.w900,
+      fontWeight: FontWeight.w500,
     ),
     this.headingSmall = const TextStyle(
       fontSize: 20,
-      fontWeight: FontWeight.w900,
+      fontWeight: FontWeight.w500,
     ),
     this.bodyExtraLarge = const TextStyle(
       fontSize: 20,

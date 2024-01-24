@@ -16,6 +16,8 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
       : _login = login,
         super(const LoginState()) {
     on<LoginErrorOccurred>(_onErrorOccurred);
+    on<LoginUsernameChanged>(_onUsernameChanged, transformer: droppable());
+    on<LoginPasswordChanged>(_onPasswordChanged, transformer: droppable());
     on<LoginStarted>(_onLoginStarted, transformer: droppable());
   }
 
@@ -36,15 +38,36 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
     ));
   }
 
+  FutureOr<void> _onUsernameChanged(
+    LoginUsernameChanged event,
+    Emitter<LoginState> emit,
+  ) {
+    emit(state.copyWith(
+      username: event.username,
+    ));
+  }
+
+  FutureOr<void> _onPasswordChanged(
+    LoginPasswordChanged event,
+    Emitter<LoginState> emit,
+  ) {
+    emit(state.copyWith(
+      password: event.password,
+    ));
+  }
+
   FutureOr _onLoginStarted(
     LoginStarted event,
     Emitter<LoginState> emit,
   ) async {
     emit(state.copyWith(
-      status: LoginStatus.loading,
+      status: LoginStatus.submitting,
     ));
 
-    final account = await _login(event.params);
+    final account = await _login((
+      username: state.username,
+      password: state.password,
+    ));
 
     emit(state.copyWith(
       status: LoginStatus.success,

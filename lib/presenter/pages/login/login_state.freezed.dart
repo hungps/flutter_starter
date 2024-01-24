@@ -18,6 +18,8 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$LoginState {
   LoginStatus get status => throw _privateConstructorUsedError;
   Account? get account => throw _privateConstructorUsedError;
+  String get username => throw _privateConstructorUsedError;
+  String get password => throw _privateConstructorUsedError;
   BaseException<dynamic>? get error => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -32,7 +34,11 @@ abstract class $LoginStateCopyWith<$Res> {
       _$LoginStateCopyWithImpl<$Res, LoginState>;
   @useResult
   $Res call(
-      {LoginStatus status, Account? account, BaseException<dynamic>? error});
+      {LoginStatus status,
+      Account? account,
+      String username,
+      String password,
+      BaseException<dynamic>? error});
 
   $AccountCopyWith<$Res>? get account;
 }
@@ -52,6 +58,8 @@ class _$LoginStateCopyWithImpl<$Res, $Val extends LoginState>
   $Res call({
     Object? status = null,
     Object? account = freezed,
+    Object? username = null,
+    Object? password = null,
     Object? error = freezed,
   }) {
     return _then(_value.copyWith(
@@ -63,6 +71,14 @@ class _$LoginStateCopyWithImpl<$Res, $Val extends LoginState>
           ? _value.account
           : account // ignore: cast_nullable_to_non_nullable
               as Account?,
+      username: null == username
+          ? _value.username
+          : username // ignore: cast_nullable_to_non_nullable
+              as String,
+      password: null == password
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as String,
       error: freezed == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
@@ -92,7 +108,11 @@ abstract class _$$_LoginStateCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {LoginStatus status, Account? account, BaseException<dynamic>? error});
+      {LoginStatus status,
+      Account? account,
+      String username,
+      String password,
+      BaseException<dynamic>? error});
 
   @override
   $AccountCopyWith<$Res>? get account;
@@ -111,6 +131,8 @@ class __$$_LoginStateCopyWithImpl<$Res>
   $Res call({
     Object? status = null,
     Object? account = freezed,
+    Object? username = null,
+    Object? password = null,
     Object? error = freezed,
   }) {
     return _then(_$_LoginState(
@@ -122,6 +144,14 @@ class __$$_LoginStateCopyWithImpl<$Res>
           ? _value.account
           : account // ignore: cast_nullable_to_non_nullable
               as Account?,
+      username: null == username
+          ? _value.username
+          : username // ignore: cast_nullable_to_non_nullable
+              as String,
+      password: null == password
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as String,
       error: freezed == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
@@ -134,7 +164,11 @@ class __$$_LoginStateCopyWithImpl<$Res>
 
 class _$_LoginState implements _LoginState {
   const _$_LoginState(
-      {this.status = LoginStatus.initial, this.account, this.error});
+      {this.status = LoginStatus.initial,
+      this.account,
+      this.username = '',
+      this.password = '',
+      this.error});
 
   @override
   @JsonKey()
@@ -142,11 +176,17 @@ class _$_LoginState implements _LoginState {
   @override
   final Account? account;
   @override
+  @JsonKey()
+  final String username;
+  @override
+  @JsonKey()
+  final String password;
+  @override
   final BaseException<dynamic>? error;
 
   @override
   String toString() {
-    return 'LoginState(status: $status, account: $account, error: $error)';
+    return 'LoginState(status: $status, account: $account, username: $username, password: $password, error: $error)';
   }
 
   @override
@@ -156,11 +196,16 @@ class _$_LoginState implements _LoginState {
             other is _$_LoginState &&
             (identical(other.status, status) || other.status == status) &&
             (identical(other.account, account) || other.account == account) &&
+            (identical(other.username, username) ||
+                other.username == username) &&
+            (identical(other.password, password) ||
+                other.password == password) &&
             (identical(other.error, error) || other.error == error));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, status, account, error);
+  int get hashCode =>
+      Object.hash(runtimeType, status, account, username, password, error);
 
   @JsonKey(ignore: true)
   @override
@@ -173,12 +218,18 @@ abstract class _LoginState implements LoginState {
   const factory _LoginState(
       {final LoginStatus status,
       final Account? account,
+      final String username,
+      final String password,
       final BaseException<dynamic>? error}) = _$_LoginState;
 
   @override
   LoginStatus get status;
   @override
   Account? get account;
+  @override
+  String get username;
+  @override
+  String get password;
   @override
   BaseException<dynamic>? get error;
   @override

@@ -22,9 +22,9 @@ class _NetworkDataSource implements NetworkDataSource {
   Future<Account> login(LoginParams params) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
-    queryParameters.addAll(params.toJson());
     final _headers = <String, dynamic>{};
-    final Map<String, dynamic>? _data = null;
+    final _data = <String, dynamic>{};
+    _data.addAll(params.toJson());
     final _result =
         await _dio.fetch<Map<String, dynamic>>(_setStreamType<Account>(Options(
       method: 'POST',
