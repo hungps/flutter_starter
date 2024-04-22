@@ -6,16 +6,16 @@ class AppLoadingIndicator extends StatelessWidget {
   final Color? color;
 
   const AppLoadingIndicator({
-    Key? key,
+    super.key,
     this.size = 48,
     this.color,
-  }) : super(key: key);
+  });
 
   const AppLoadingIndicator.small({
-    Key? key,
+    super.key,
     this.size = 24,
     this.color,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

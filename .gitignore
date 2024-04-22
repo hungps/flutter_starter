@@ -43,9 +43,6 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 
-# fvm
-/.fvm/flutter_sdk
-
 # flutter_config
 **/ios/Flutter/tmp.xcconfig
 **/ios/.envfile
@@ -56,3 +53,6 @@ app.*.map.json
 
 # Mason
 .mason/
+
+# FVM Version Cache
+.fvm/

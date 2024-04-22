@@ -20,10 +20,11 @@ class _NetworkDataSource implements NetworkDataSource {
 
   @override
   Future<Account> login(LoginParams params) async {
-    const _extra = <String, dynamic>{};
+    final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
-    final _data = params;
+    final _data = <String, dynamic>{};
+    _data.addAll(params.toJson());
     final _result =
         await _dio.fetch<Map<String, dynamic>>(_setStreamType<Account>(Options(
       method: 'POST',
@@ -47,10 +48,10 @@ class _NetworkDataSource implements NetworkDataSource {
 
   @override
   Future<Account> getCurrentAccount() async {
-    const _extra = <String, dynamic>{};
+    final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
-    final Map<String, dynamic>? _data = null;
+    const Map<String, dynamic>? _data = null;
     final _result =
         await _dio.fetch<Map<String, dynamic>>(_setStreamType<Account>(Options(
       method: 'POST',
