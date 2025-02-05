@@ -55,71 +55,76 @@ class AppTheme extends ThemeExtension<AppTheme> {
         ),
         tabBarTheme: TabBarTheme(
           labelColor: colors.text,
-          unselectedLabelColor: colors.text.withOpacity(0.4),
+          unselectedLabelColor: colors.text.withValues(alpha: 0.4),
         ),
         filledButtonTheme: FilledButtonThemeData(
           style: styles.buttonLarge.copyWith(
-            backgroundColor: MaterialStateProperty.resolveWith((states) {
-              return states.contains(MaterialState.disabled)
+            backgroundColor: WidgetStateProperty.resolveWith((states) {
+              return states.contains(WidgetState.disabled)
                   ? colors.disabled
                   : null; // Defer to the widget's default.
             }),
-            foregroundColor: MaterialStateProperty.resolveWith((states) {
-              return states.contains(MaterialState.disabled)
+            foregroundColor: WidgetStateProperty.resolveWith((states) {
+              return states.contains(WidgetState.disabled)
                   ? colors.disabled
                   : null; // Defer to the widget's default.
             }),
+            shape: WidgetStatePropertyAll(StadiumBorder()),
           ),
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: styles.buttonLarge.copyWith(
-            backgroundColor: MaterialStateProperty.resolveWith((states) {
-              return states.contains(MaterialState.disabled)
+            backgroundColor: WidgetStateProperty.resolveWith((states) {
+              return states.contains(WidgetState.disabled)
                   ? colors.disabled
                   : null; // Defer to the widget's default.
             }),
-            foregroundColor: MaterialStateProperty.resolveWith((states) {
-              return states.contains(MaterialState.disabled)
+            foregroundColor: WidgetStateProperty.resolveWith((states) {
+              return states.contains(WidgetState.disabled)
                   ? colors.disabled
                   : null; // Defer to the widget's default.
             }),
+            shape: WidgetStatePropertyAll(StadiumBorder()),
           ),
         ),
         outlinedButtonTheme: OutlinedButtonThemeData(
           style: styles.buttonLarge.copyWith(
-            side: MaterialStateProperty.resolveWith((states) {
-              return states.contains(MaterialState.disabled)
+            side: WidgetStateProperty.resolveWith((states) {
+              return states.contains(WidgetState.disabled)
                   ? BorderSide(color: colors.disabled)
                   : null;
             }),
-            foregroundColor: MaterialStateProperty.resolveWith((states) {
-              return states.contains(MaterialState.disabled)
+            foregroundColor: WidgetStateProperty.resolveWith((states) {
+              return states.contains(WidgetState.disabled)
                   ? colors.disabled
                   : null; // Defer to the widget's default.
             }),
+            shape: WidgetStatePropertyAll(StadiumBorder()),
           ),
         ),
         textButtonTheme: TextButtonThemeData(
           style: styles.buttonLarge.copyWith(
-            backgroundColor: MaterialStateProperty.resolveWith((Set<MaterialState> states) {
-              return states.contains(MaterialState.disabled)
+            backgroundColor: WidgetStateProperty.resolveWith((states) {
+              return states.contains(WidgetState.disabled)
                   ? colors.disabled
                   : null; // Defer to the widget's default.
             }),
-            foregroundColor: MaterialStateProperty.resolveWith((Set<MaterialState> states) {
-              return states.contains(MaterialState.disabled)
+            foregroundColor: WidgetStateProperty.resolveWith((states) {
+              return states.contains(WidgetState.disabled)
                   ? colors.disabled
                   : null; // Defer to the widget's default.
             }),
+            shape: WidgetStatePropertyAll(StadiumBorder()),
           ),
         ),
         inputDecorationTheme: InputDecorationTheme(
-          contentPadding: const EdgeInsets.symmetric(vertical: 8, horizontal: 42),
+          contentPadding:
+              const EdgeInsets.symmetric(vertical: 8, horizontal: 42),
           filled: true,
           fillColor: colors.backgroundDark,
           hintStyle: typographies.bodySmall.copyWith(
             fontWeight: FontWeight.w500,
-            color: colors.text.withOpacity(0.4),
+            color: colors.text.withValues(alpha: 0.4),
           ),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(100),

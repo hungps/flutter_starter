@@ -69,19 +69,23 @@ class _LoginPageState extends State<LoginPage> {
         LoginFailureListener(listener: _onError),
       ],
       child: Scaffold(
-        body: Padding(
-          padding: const EdgeInsets.all(24),
-          child: Center(
+        body: Center(
+          child: Container(
+            constraints: BoxConstraints(maxWidth: 512),
+            padding: const EdgeInsets.all(24),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.stretch,
+              spacing: 16,
               children: [
-                Text(
-                  tr(F.title),
-                  textAlign: TextAlign.center,
-                  style: context.typographies.heading,
+                Padding(
+                  padding: const EdgeInsets.all(16),
+                  child: Text(
+                    F.title,
+                    textAlign: TextAlign.center,
+                    style: context.typographies.heading,
+                  ),
                 ),
-                const SizedBox(height: 24),
                 TextField(
                   decoration: InputDecoration(
                     prefixIcon: const Icon(Icons.person),
@@ -89,7 +93,6 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   onChanged: _onUsernameChanged,
                 ),
-                const SizedBox(height: 16),
                 TextField(
                   decoration: InputDecoration(
                     prefixIcon: const Icon(Icons.lock),
@@ -98,7 +101,6 @@ class _LoginPageState extends State<LoginPage> {
                   obscureText: true,
                   onChanged: _onPasswordChanged,
                 ),
-                const SizedBox(height: 16),
                 LoginStatusSelector(builder: (status) {
                   return FilledButton(
                     onPressed: _onLoginPressed,
