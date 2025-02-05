@@ -6,10 +6,10 @@ import 'package:flutter_starter/data/entities/account.dart';
 import 'package:flutter_starter/data/repositories/auth_repository/auth_repository.dart';
 
 @singleton
-class VerifyLoginStatus extends UseCase<Account, NoParams?> {
+class VerifyLoginStatusUseCase extends UseCase<Account, NoParams?> {
   final AuthRepository _authRepository;
 
-  const VerifyLoginStatus({
+  const VerifyLoginStatusUseCase({
     required AuthRepository authRepository,
   }) : _authRepository = authRepository;
 

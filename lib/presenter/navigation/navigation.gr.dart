@@ -37,7 +37,7 @@ class LoginRoute extends PageRouteInfo<void> {
   static PageInfo page = PageInfo(
     name,
     builder: (data) {
-      return LoginPage();
+      return WrappedRoute(child: LoginPage());
     },
   );
 }
@@ -53,7 +53,7 @@ class SplashRoute extends PageRouteInfo<void> {
   static PageInfo page = PageInfo(
     name,
     builder: (data) {
-      return SplashPage();
+      return WrappedRoute(child: SplashPage());
     },
   );
 }

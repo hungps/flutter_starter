@@ -11,15 +11,23 @@ import 'package:flutter_starter/presenter/pages/splash/splash_selector.dart';
 import 'package:flutter_starter/presenter/pages/splash/splash_state.dart';
 
 @RoutePage()
-class SplashPage extends StatefulWidget {
+class SplashPage extends StatefulWidget implements AutoRouteWrapper {
   const SplashPage();
+
+  @override
+  Widget wrappedRoute(BuildContext context) {
+    return BlocProvider(
+      create: (ctx) => provider.get<SplashBloc>(),
+      child: this,
+    );
+  }
 
   @override
   State<SplashPage> createState() => _SplashPageState();
 }
 
 class _SplashPageState extends State<SplashPage> {
-  final SplashBloc _bloc = provider.get<SplashBloc>();
+  SplashBloc get _bloc => context.read<SplashBloc>();
 
   @override
   void initState() {
@@ -28,12 +36,6 @@ class _SplashPageState extends State<SplashPage> {
     scheduleMicrotask(() {
       _bloc.add(const SplashVerifyLoginStatusStarted());
     });
-  }
-
-  @override
-  void dispose() {
-    _bloc.close();
-    super.dispose();
   }
 
   void _onSuccess(BuildContext context, SplashState state) {
@@ -46,17 +48,14 @@ class _SplashPageState extends State<SplashPage> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider.value(
-      value: _bloc,
-      child: MultiBlocListener(
-        listeners: [
-          SplashVerifySuccessListener(listener: _onSuccess),
-          SplashVerifyFailureListener(listener: _onError),
-        ],
-        child: const Scaffold(
-          body: Center(
-            child: CircularProgressIndicator(),
-          ),
+    return MultiBlocListener(
+      listeners: [
+        SplashVerifySuccessListener(listener: _onSuccess),
+        SplashVerifyFailureListener(listener: _onError),
+      ],
+      child: const Scaffold(
+        body: Center(
+          child: CircularProgressIndicator(),
         ),
       ),
     );

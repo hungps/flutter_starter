@@ -43,16 +43,10 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 
-# flutter_config
-**/ios/Flutter/tmp.xcconfig
-**/ios/.envfile
-
-# Environment files
-.env*
-!.env.example
-
 # Mason
 .mason/
+# https://github.com/felangel/mason/issues/947
+mason-lock.json
 
 # FVM Version Cache
 .fvm/

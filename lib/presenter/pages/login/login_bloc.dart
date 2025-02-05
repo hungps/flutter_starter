@@ -10,9 +10,9 @@ import 'package:injectable/injectable.dart';
 
 @injectable
 class LoginBloc extends Bloc<LoginEvent, LoginState> {
-  final Login _login;
+  final LoginUseCase _login;
 
-  LoginBloc({required Login login})
+  LoginBloc({required LoginUseCase login})
       : _login = login,
         super(const LoginState()) {
     on<LoginErrorOccurred>(_onErrorOccurred);

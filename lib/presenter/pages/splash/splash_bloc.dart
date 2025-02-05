@@ -9,10 +9,10 @@ import 'package:injectable/injectable.dart';
 
 @injectable
 class SplashBloc extends Bloc<SplashEvent, SplashState> {
-  final VerifyLoginStatus _verifyLoginStatus;
+  final VerifyLoginStatusUseCase _verifyLoginStatus;
 
   SplashBloc({
-    required VerifyLoginStatus verifyLoginStatus,
+    required VerifyLoginStatusUseCase verifyLoginStatus,
   })  : _verifyLoginStatus = verifyLoginStatus,
         super(const SplashState()) {
     on<SplashErrorOccurred>(_onErrorOccurred);

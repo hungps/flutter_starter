@@ -8,10 +8,10 @@ import 'package:flutter_starter/data/repositories/auth_repository/auth_repositor
 typedef LoginParams = ({String username, String password});
 
 @singleton
-class Login extends UseCase<Account, LoginParams> {
+class LoginUseCase extends UseCase<Account, LoginParams> {
   final AuthRepository _authRepository;
 
-  const Login({
+  const LoginUseCase({
     required AuthRepository authRepository,
   }) : _authRepository = authRepository;
 

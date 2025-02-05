@@ -1,5 +1,5 @@
-import 'package:dio/dio.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_starter/data/repositories/auth_repository/exceptions.dart';
 import 'package:flutter_starter/data/states/auth/auth_bloc.dart';
 import 'package:flutter_starter/data/states/auth/auth_event.dart';
 import 'package:flutter_starter/presenter/pages/login/login_bloc.dart';
@@ -21,19 +21,16 @@ class AppBlocObserver extends BlocObserver {
 
   @override
   void onError(BlocBase bloc, Object error, StackTrace stackTrace) {
-    if (error is DioException) {
-      final statusCode = error.response?.statusCode;
-
-      if (statusCode == 401) {
-        _authBloc.add(const AuthLoggedOut());
-      }
+    if (error is UnauthorizedException) {
+      _authBloc.add(const AuthLoggedOut());
     }
 
     super.onError(bloc, error, stackTrace);
   }
 
   void _onLoginBlocChanged(LoginBloc bloc, Change<LoginState> change) {
-    if (change.nextState.status == LoginStatus.success && change.nextState.account != null) {
+    if (change.nextState.status == LoginStatus.success &&
+        change.nextState.account != null) {
       _authBloc.add(AuthLoggedIn(change.nextState.account!));
     }
   }

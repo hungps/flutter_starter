@@ -61,14 +61,15 @@ extension GetItInjectableX on _i174.GetIt {
         () => _i536.NetworkDataSource(gh<_i288.NetworkDio>()));
     gh.singleton<_i344.AuthRepository>(() => _i522.DefaultAuthRepository(
         networkDataSource: gh<_i536.NetworkDataSource>()));
-    gh.singleton<_i470.Login>(
-        () => _i470.Login(authRepository: gh<_i344.AuthRepository>()));
-    gh.singleton<_i412.VerifyLoginStatus>(() =>
-        _i412.VerifyLoginStatus(authRepository: gh<_i344.AuthRepository>()));
+    gh.singleton<_i470.LoginUseCase>(
+        () => _i470.LoginUseCase(authRepository: gh<_i344.AuthRepository>()));
+    gh.singleton<_i412.VerifyLoginStatusUseCase>(() =>
+        _i412.VerifyLoginStatusUseCase(
+            authRepository: gh<_i344.AuthRepository>()));
+    gh.factory<_i517.SplashBloc>(() => _i517.SplashBloc(
+        verifyLoginStatus: gh<_i412.VerifyLoginStatusUseCase>()));
     gh.factory<_i902.LoginBloc>(
-        () => _i902.LoginBloc(login: gh<_i470.Login>()));
-    gh.factory<_i517.SplashBloc>(() =>
-        _i517.SplashBloc(verifyLoginStatus: gh<_i412.VerifyLoginStatus>()));
+        () => _i902.LoginBloc(login: gh<_i470.LoginUseCase>()));
     return this;
   }
 }

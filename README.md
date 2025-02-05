@@ -18,7 +18,9 @@ A new Flutter project.
 
 ### Running the app
 
-- Run `flutter run` to run the app
+- Run `flutter run --flavor=dev -t lib/main_dev.dart` to run the app in development environment.
+- Run `flutter run --flavor=staging -t lib/main_staging.dart` to run the app in staging environment.
+- Run `flutter run --flavor=production -t lib/main_production.dart` to run the app in production environment.
 
 ### When adding a new translated text
 
