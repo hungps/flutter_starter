@@ -24,6 +24,7 @@ import 'data/states/settings/settings_bloc.dart' as _i932;
 import 'data/usecases/login.dart' as _i470;
 import 'data/usecases/verify_login_status.dart' as _i412;
 import 'di.dart' as _i913;
+import 'presenter/navigation/navigation.dart' as _i551;
 import 'presenter/pages/login/login_bloc.dart' as _i902;
 import 'presenter/pages/splash/splash_bloc.dart' as _i517;
 import 'services/oauth_token_manager/oauth_token_manager.dart' as _i132;
@@ -47,6 +48,8 @@ extension GetItInjectableX on _i174.GetIt {
     gh.singleton<_i963.AuthBloc>(() => _i963.AuthBloc());
     gh.singleton<_i132.OauthTokenManager>(() => _i290.DefaultOauthTokenManager(
         flutterSecureStorage: gh<_i558.FlutterSecureStorage>()));
+    gh.singleton<_i551.AppRouter>(
+        () => _i551.AppRouter(authBloc: gh<_i963.AuthBloc>()));
     gh.singleton<_i193.LocalDataSource>(() => _i193.LocalDataSource(
         flutterSecureStorage: gh<_i558.FlutterSecureStorage>()));
     gh.singleton<String>(
