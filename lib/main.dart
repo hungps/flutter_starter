@@ -7,7 +7,7 @@ import 'package:flutter_starter/di.dart';
 import 'package:flutter_starter/presenter/app.dart';
 import 'package:flutter_starter/presenter/languages/languages.dart';
 
-void main() async {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await EasyLocalization.ensureInitialized();
@@ -24,3 +24,4 @@ void main() async {
     ),
   );
 }
+

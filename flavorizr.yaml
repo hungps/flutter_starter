@@ -1,0 +1,30 @@
+flavors:
+  dev:
+    app:
+      name: "[Dev] Starter"
+    android:
+      applicationId: "com.hungps.flutter.starter.dev"
+    ios:
+      bundleId: "com.hungps.flutter.starter.dev"
+    macos:
+      bundleId: "com.hungps.flutter.starter.dev"
+
+  staging:
+    app:
+      name: "[Stg] Starter"
+    android:
+      applicationId: "com.hungps.flutter.starter.stg"
+    ios:
+      bundleId: "com.hungps.flutter.starter.stg"
+    macos:
+      bundleId: "com.hungps.flutter.starter.stg"
+
+  production:
+    app:
+      name: "Starter"
+    android:
+      applicationId: "com.hungps.flutter.starter"
+    ios:
+      bundleId: "com.hungps.flutter.starter"
+    macos:
+      bundleId: "com.hungps.flutter.starter"

@@ -1,0 +1,7 @@
+#include "../../Flutter/stagingRelease.xcconfig"
+#include "Warnings.xcconfig"
+
+FLUTTER_TARGET=lib/main_staging.dart
+ASSET_PREFIX=staging
+BUNDLE_NAME=[Stg] Starter
+BUNDLE_DISPLAY_NAME=[Stg] Starter

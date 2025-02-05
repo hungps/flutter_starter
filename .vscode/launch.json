@@ -5,22 +5,58 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Run: Debug",
+      "name": "Run: Dev Debug",
       "request": "launch",
       "type": "dart",
-      "args": ["--debug"]
+      "args": ["--debug", "--flavor", "dev", "-t", "lib/main_dev.dart"]
     },
     {
-      "name": "Run: Profile",
+      "name": "Run: Dev Profile",
       "request": "launch",
       "type": "dart",
-      "args": ["--profile"]
+      "args": ["--profile", "--flavor", "dev", "-t", "lib/main_dev.dart"]
     },
     {
-      "name": "Run: Release",
+      "name": "Run: Dev Production",
       "request": "launch",
       "type": "dart",
-      "args": ["--release"]
+      "args": ["--release", "--flavor", "dev", "-t", "lib/main_dev.dart"]
+    },
+    {
+      "name": "Run: Staging Debug",
+      "request": "launch",
+      "type": "dart",
+      "args": ["--debug", "--flavor", "staging", "-t", "lib/main_staging.dart"]
+    },
+    {
+      "name": "Run: Staging Profile",
+      "request": "launch",
+      "type": "dart",
+      "args": ["--profile", "--flavor", "staging", "-t", "lib/main_staging.dart"]
+    },
+    {
+      "name": "Run: Staging Production",
+      "request": "launch",
+      "type": "dart",
+      "args": ["--release", "--flavor", "staging", "-t", "lib/main_staging.dart"]
+    },
+    {
+      "name": "Run: Production Debug",
+      "request": "launch",
+      "type": "dart",
+      "args": ["--debug", "--flavor", "production", "-t", "lib/main_production.dart"]
+    },
+    {
+      "name": "Run: Production Profile",
+      "request": "launch",
+      "type": "dart",
+      "args": ["--profile", "--flavor", "production", "-t", "lib/main_production.dart"]
+    },
+    {
+      "name": "Run: Production Production",
+      "request": "launch",
+      "type": "dart",
+      "args": ["--release", "--flavor", "production", "-t", "lib/main_production.dart"]
     }
   ]
 }

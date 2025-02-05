@@ -3,6 +3,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_starter/di.dart';
+import 'package:flutter_starter/flavors.dart';
 import 'package:flutter_starter/presenter/languages/translation_keys.g.dart';
 import 'package:flutter_starter/presenter/navigation/navigation.dart';
 import 'package:flutter_starter/presenter/pages/login/login_bloc.dart';
@@ -75,7 +76,7 @@ class _LoginPageState extends State<LoginPage> {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   Text(
-                    tr(LocaleKeys.Login),
+                    tr(F.title),
                     textAlign: TextAlign.center,
                     style: context.typographies.heading,
                   ),

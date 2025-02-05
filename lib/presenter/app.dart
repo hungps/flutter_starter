@@ -6,6 +6,7 @@ import 'package:flutter_starter/data/states/auth/auth_bloc.dart';
 import 'package:flutter_starter/data/states/auth/auth_state.dart';
 import 'package:flutter_starter/data/states/settings/settings_bloc.dart';
 import 'package:flutter_starter/presenter/navigation/navigation.dart';
+import 'package:flutter_starter/flavors.dart';
 
 class App extends StatelessWidget {
   static final _appRouter = AppRouter();
@@ -28,7 +29,7 @@ class App extends StatelessWidget {
         ),
       ],
       child: MaterialApp.router(
-        title: "Flutter Starter",
+        title: F.title,
         theme: appTheme.themeData,
         supportedLocales: context.supportedLocales,
         localizationsDelegates: [

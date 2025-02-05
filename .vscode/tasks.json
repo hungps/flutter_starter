@@ -36,6 +36,13 @@
       "group": "build"
     },
     {
+      "label": "flutter_flavorizr",
+      "type": "shell",
+      "command": "flutter pub run flutter_flavorizr",
+      "problemMatcher": [],
+      "group": "build"
+    },
+    {
       "label": "mason: bloc_page",
       "type": "shell",
       "command": "mason make bloc_page --name '${input:page_name}'",
