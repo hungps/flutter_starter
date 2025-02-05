@@ -6,7 +6,6 @@ import 'package:flutter_starter/data/states/auth/auth_bloc.dart';
 import 'package:flutter_starter/data/states/settings/settings_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-import 'package:flutter_starter/env.dart';
 import 'package:injectable/injectable.dart';
 
 import 'di.config.dart';
@@ -27,7 +26,7 @@ abstract class RegisterModule {
 
   @Named('baseUrl')
   @singleton
-  String get baseUrl => AppEnv.baseUrl;
+  String get baseUrl => "https://example.com";
 }
 
 class GlobalBlocProviders extends StatelessWidget {

@@ -8,22 +8,19 @@
       "name": "Run: Debug",
       "request": "launch",
       "type": "dart",
-      "args": ["--debug", "--flavor", "dev"],
-      "cwd": "${workspaceRoot}"
+      "args": ["--debug"]
     },
     {
       "name": "Run: Profile",
       "request": "launch",
       "type": "dart",
-      "args": ["--profile", "--flavor", "dev"],
-      "cwd": "${workspaceRoot}"
+      "args": ["--profile"]
     },
     {
       "name": "Run: Release",
       "request": "launch",
       "type": "dart",
-      "args": ["--release", "--flavor", "dev"],
-      "cwd": "${workspaceRoot}"
+      "args": ["--release"]
     }
   ]
 }

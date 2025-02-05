@@ -1,4 +1,4 @@
-package com.hungps.flutterstarter
+package hungps.com.flutter_starter
 
 import io.flutter.embedding.android.FlutterActivity
 
