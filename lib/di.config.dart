@@ -1,3 +1,4 @@
+// dart format width=80
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
 // **************************************************************************
@@ -8,66 +9,68 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:flutter_secure_storage/flutter_secure_storage.dart' as _i3;
-import 'package:get_it/get_it.dart' as _i1;
-import 'package:injectable/injectable.dart' as _i2;
+import 'package:flutter_secure_storage/flutter_secure_storage.dart' as _i558;
+import 'package:get_it/get_it.dart' as _i174;
+import 'package:injectable/injectable.dart' as _i526;
 
-import 'data/repositories/auth_repository/auth_repository.dart' as _i11;
-import 'data/repositories/auth_repository/auth_repository.default.dart' as _i12;
-import 'data/sources/local/local.dart' as _i8;
-import 'data/sources/network/dio.dart' as _i9;
-import 'data/sources/network/network.dart' as _i10;
-import 'data/states/auth/auth_bloc.dart' as _i5;
-import 'data/states/settings/settings_bloc.dart' as _i4;
-import 'data/usecases/login.dart' as _i13;
-import 'data/usecases/verify_login_status.dart' as _i14;
-import 'di.dart' as _i17;
-import 'presenter/pages/login/login_bloc.dart' as _i15;
-import 'presenter/pages/splash/splash_bloc.dart' as _i16;
-import 'services/oauth_token_manager/oauth_token_manager.dart' as _i6;
-import 'services/oauth_token_manager/oauth_token_manager.default.dart' as _i7;
+import 'data/repositories/auth_repository/auth_repository.dart' as _i344;
+import 'data/repositories/auth_repository/auth_repository.default.dart'
+    as _i522;
+import 'data/sources/local/local.dart' as _i193;
+import 'data/sources/network/dio.dart' as _i288;
+import 'data/sources/network/network.dart' as _i536;
+import 'data/states/auth/auth_bloc.dart' as _i963;
+import 'data/states/settings/settings_bloc.dart' as _i932;
+import 'data/usecases/login.dart' as _i470;
+import 'data/usecases/verify_login_status.dart' as _i412;
+import 'di.dart' as _i913;
+import 'presenter/pages/login/login_bloc.dart' as _i902;
+import 'presenter/pages/splash/splash_bloc.dart' as _i517;
+import 'services/oauth_token_manager/oauth_token_manager.dart' as _i132;
+import 'services/oauth_token_manager/oauth_token_manager.default.dart' as _i290;
 
-extension GetItInjectableX on _i1.GetIt {
+extension GetItInjectableX on _i174.GetIt {
 // initializes the registration of main-scope dependencies inside of GetIt
-  _i1.GetIt init({
+  _i174.GetIt init({
     String? environment,
-    _i2.EnvironmentFilter? environmentFilter,
+    _i526.EnvironmentFilter? environmentFilter,
   }) {
-    final gh = _i2.GetItHelper(
+    final gh = _i526.GetItHelper(
       this,
       environment,
       environmentFilter,
     );
     final registerModule = _$RegisterModule();
-    gh.singleton<_i3.FlutterSecureStorage>(
+    gh.singleton<_i558.FlutterSecureStorage>(
         () => registerModule.flutterSecureStorage);
-    gh.singleton<_i4.SettingsBloc>(() => _i4.SettingsBloc());
-    gh.singleton<_i5.AuthBloc>(() => _i5.AuthBloc());
-    gh.singleton<_i6.OauthTokenManager>(() => _i7.DefaultOauthTokenManager(
-        flutterSecureStorage: gh<_i3.FlutterSecureStorage>()));
-    gh.singleton<_i8.LocalDataSource>(() => _i8.LocalDataSource(
-        flutterSecureStorage: gh<_i3.FlutterSecureStorage>()));
+    gh.singleton<_i932.SettingsBloc>(() => _i932.SettingsBloc());
+    gh.singleton<_i963.AuthBloc>(() => _i963.AuthBloc());
+    gh.singleton<_i132.OauthTokenManager>(() => _i290.DefaultOauthTokenManager(
+        flutterSecureStorage: gh<_i558.FlutterSecureStorage>()));
+    gh.singleton<_i193.LocalDataSource>(() => _i193.LocalDataSource(
+        flutterSecureStorage: gh<_i558.FlutterSecureStorage>()));
     gh.singleton<String>(
       () => registerModule.baseUrl,
       instanceName: 'baseUrl',
     );
-    gh.singleton<_i9.NetworkDio>(() => _i9.NetworkDio(
-          tokenManager: gh<_i6.OauthTokenManager>(),
+    gh.singleton<_i288.NetworkDio>(() => _i288.NetworkDio(
+          tokenManager: gh<_i132.OauthTokenManager>(),
           baseUrl: gh<String>(instanceName: 'baseUrl'),
         ));
-    gh.singleton<_i10.NetworkDataSource>(
-        () => _i10.NetworkDataSource(gh<_i9.NetworkDio>()));
-    gh.singleton<_i11.AuthRepository>(() => _i12.DefaultAuthRepository(
-        networkDataSource: gh<_i10.NetworkDataSource>()));
-    gh.singleton<_i13.Login>(
-        () => _i13.Login(authRepository: gh<_i11.AuthRepository>()));
-    gh.singleton<_i14.VerifyLoginStatus>(() =>
-        _i14.VerifyLoginStatus(authRepository: gh<_i11.AuthRepository>()));
-    gh.factory<_i15.LoginBloc>(() => _i15.LoginBloc(login: gh<_i13.Login>()));
-    gh.factory<_i16.SplashBloc>(
-        () => _i16.SplashBloc(verifyLoginStatus: gh<_i14.VerifyLoginStatus>()));
+    gh.singleton<_i536.NetworkDataSource>(
+        () => _i536.NetworkDataSource(gh<_i288.NetworkDio>()));
+    gh.singleton<_i344.AuthRepository>(() => _i522.DefaultAuthRepository(
+        networkDataSource: gh<_i536.NetworkDataSource>()));
+    gh.singleton<_i470.Login>(
+        () => _i470.Login(authRepository: gh<_i344.AuthRepository>()));
+    gh.singleton<_i412.VerifyLoginStatus>(() =>
+        _i412.VerifyLoginStatus(authRepository: gh<_i344.AuthRepository>()));
+    gh.factory<_i902.LoginBloc>(
+        () => _i902.LoginBloc(login: gh<_i470.Login>()));
+    gh.factory<_i517.SplashBloc>(() =>
+        _i517.SplashBloc(verifyLoginStatus: gh<_i412.VerifyLoginStatus>()));
     return this;
   }
 }
 
-class _$RegisterModule extends _i17.RegisterModule {}
+class _$RegisterModule extends _i913.RegisterModule {}

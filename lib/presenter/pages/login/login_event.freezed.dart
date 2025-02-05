@@ -84,6 +84,9 @@ class _$LoginEventCopyWithImpl<$Res, $Val extends LoginEvent>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of LoginEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -103,6 +106,8 @@ class __$$LoginUsernameChangedImplCopyWithImpl<$Res>
       $Res Function(_$LoginUsernameChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of LoginEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -142,7 +147,9 @@ class _$LoginUsernameChangedImpl implements LoginUsernameChanged {
   @override
   int get hashCode => Object.hash(runtimeType, username);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of LoginEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LoginUsernameChangedImplCopyWith<_$LoginUsernameChangedImpl>
@@ -230,7 +237,10 @@ abstract class LoginUsernameChanged implements LoginEvent {
       _$LoginUsernameChangedImpl;
 
   String get username;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of LoginEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoginUsernameChangedImplCopyWith<_$LoginUsernameChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -252,6 +262,8 @@ class __$$LoginPasswordChangedImplCopyWithImpl<$Res>
       $Res Function(_$LoginPasswordChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of LoginEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -291,7 +303,9 @@ class _$LoginPasswordChangedImpl implements LoginPasswordChanged {
   @override
   int get hashCode => Object.hash(runtimeType, password);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of LoginEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LoginPasswordChangedImplCopyWith<_$LoginPasswordChangedImpl>
@@ -379,7 +393,10 @@ abstract class LoginPasswordChanged implements LoginEvent {
       _$LoginPasswordChangedImpl;
 
   String get password;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of LoginEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoginPasswordChangedImplCopyWith<_$LoginPasswordChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -398,6 +415,9 @@ class __$$LoginStartedImplCopyWithImpl<$Res>
   __$$LoginStartedImplCopyWithImpl(
       _$LoginStartedImpl _value, $Res Function(_$LoginStartedImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of LoginEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -515,6 +535,8 @@ class __$$LoginErrorOccurredImplCopyWithImpl<$Res>
       $Res Function(_$LoginErrorOccurredImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of LoginEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -553,7 +575,9 @@ class _$LoginErrorOccurredImpl implements LoginErrorOccurred {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of LoginEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LoginErrorOccurredImplCopyWith<_$LoginErrorOccurredImpl> get copyWith =>
@@ -640,7 +664,10 @@ abstract class LoginErrorOccurred implements LoginEvent {
       _$LoginErrorOccurredImpl;
 
   BaseException<dynamic>? get error;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of LoginEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoginErrorOccurredImplCopyWith<_$LoginErrorOccurredImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

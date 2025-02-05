@@ -71,6 +71,9 @@ class _$AuthEventCopyWithImpl<$Res, $Val extends AuthEvent>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of AuthEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -92,6 +95,8 @@ class __$$AuthLoggedInImplCopyWithImpl<$Res>
       _$AuthLoggedInImpl _value, $Res Function(_$AuthLoggedInImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AuthEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -105,6 +110,8 @@ class __$$AuthLoggedInImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of AuthEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AccountCopyWith<$Res> get account {
@@ -138,7 +145,9 @@ class _$AuthLoggedInImpl implements AuthLoggedIn {
   @override
   int get hashCode => Object.hash(runtimeType, account);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AuthEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AuthLoggedInImplCopyWith<_$AuthLoggedInImpl> get copyWith =>
@@ -211,7 +220,10 @@ abstract class AuthLoggedIn implements AuthEvent {
   const factory AuthLoggedIn(final Account account) = _$AuthLoggedInImpl;
 
   Account get account;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AuthEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AuthLoggedInImplCopyWith<_$AuthLoggedInImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -233,6 +245,8 @@ class __$$AuthLoggedOutImplCopyWithImpl<$Res>
       _$AuthLoggedOutImpl _value, $Res Function(_$AuthLoggedOutImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AuthEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -271,7 +285,9 @@ class _$AuthLoggedOutImpl implements AuthLoggedOut {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AuthEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AuthLoggedOutImplCopyWith<_$AuthLoggedOutImpl> get copyWith =>
@@ -344,7 +360,10 @@ abstract class AuthLoggedOut implements AuthEvent {
   const factory AuthLoggedOut([final Exception? error]) = _$AuthLoggedOutImpl;
 
   Exception? get error;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AuthEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AuthLoggedOutImplCopyWith<_$AuthLoggedOutImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -75,6 +75,9 @@ class _$SplashEventCopyWithImpl<$Res, $Val extends SplashEvent>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of SplashEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -94,6 +97,9 @@ class __$$SplashVerifyLoginStatusStartedImplCopyWithImpl<$Res>
       _$SplashVerifyLoginStatusStartedImpl _value,
       $Res Function(_$SplashVerifyLoginStatusStartedImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of SplashEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -205,6 +211,8 @@ class __$$SplashErrorOccurredImplCopyWithImpl<$Res>
       $Res Function(_$SplashErrorOccurredImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SplashEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -243,7 +251,9 @@ class _$SplashErrorOccurredImpl implements SplashErrorOccurred {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SplashEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SplashErrorOccurredImplCopyWith<_$SplashErrorOccurredImpl> get copyWith =>
@@ -321,7 +331,10 @@ abstract class SplashErrorOccurred implements SplashEvent {
       _$SplashErrorOccurredImpl;
 
   BaseException<dynamic>? get error;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SplashEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SplashErrorOccurredImplCopyWith<_$SplashErrorOccurredImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
