@@ -21,6 +21,7 @@ class AppRouter extends RootStackRouter {
         AutoRoute(path: '/', page: SplashRoute.page),
         AutoRoute(path: '/login', page: LoginRoute.page),
         AutoRoute(path: '/home', page: HomeRoute.page),
+        // mason:bloc_page - Add routes here
       ];
 
   bool isUnauthorizedRoute(String routeName) => [

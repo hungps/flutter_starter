@@ -4,7 +4,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_starter/di.dart';
 import 'package:flutter_starter/presenter/pages/{{name.snakeCase()}}/{{name.snakeCase()}}_bloc.dart';
 
-// TODO: Add the page to the router
 @RoutePage()
 class {{name.pascalCase()}}Page extends StatefulWidget implements AutoRouteWrapper {
   const {{name.pascalCase()}}Page();
