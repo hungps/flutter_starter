@@ -125,12 +125,10 @@ lib/
    mason make bloc_page
    ```
 
-   This generates the page, BLoC, event, state, and selector files.
+   This generates the page, BLoC, event, state, and selector files. The generated page is already annotated with `@RoutePage()` and the BLoC with `@injectable`. The post-gen hook automatically registers the route in `lib/presenter/navigation/navigation.dart`.
 
 3. After generation:
-   - Annotate the page with `@RoutePage()`.
-   - Register the route in `lib/presenter/navigation/navigation.dart`.
-   - Annotate the BLoC with `@injectable`.
+   - Verify the new `AutoRoute(...)` entry was added to the `routes` getter in `navigation.dart` (the hook does this — check if it didn't for any reason).
    - Run code generation (see above).
 
 > VS Code users: press `Cmd + Shift + P`, type `Run Task`, and select `mason: bloc_page`.
