@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,54 +9,45 @@ part of 'login_event.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$LoginEvent {
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String username) usernameChanged,
-    required TResult Function(String password) passwordChanged,
-    required TResult Function() loginStarted,
-    required TResult Function(BaseException<dynamic>? error) errorOccurred,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String username)? usernameChanged,
-    TResult? Function(String password)? passwordChanged,
-    TResult? Function()? loginStarted,
-    TResult? Function(BaseException<dynamic>? error)? errorOccurred,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String username)? usernameChanged,
-    TResult Function(String password)? passwordChanged,
-    TResult Function()? loginStarted,
-    TResult Function(BaseException<dynamic>? error)? errorOccurred,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(LoginUsernameChanged value) usernameChanged,
-    required TResult Function(LoginPasswordChanged value) passwordChanged,
-    required TResult Function(LoginStarted value) loginStarted,
-    required TResult Function(LoginErrorOccurred value) errorOccurred,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(LoginUsernameChanged value)? usernameChanged,
-    TResult? Function(LoginPasswordChanged value)? passwordChanged,
-    TResult? Function(LoginStarted value)? loginStarted,
-    TResult? Function(LoginErrorOccurred value)? errorOccurred,
-  }) =>
-      throw _privateConstructorUsedError;
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is LoginEvent);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  String toString() {
+    return 'LoginEvent()';
+  }
+}
+
+/// @nodoc
+class $LoginEventCopyWith<$Res> {
+  $LoginEventCopyWith(LoginEvent _, $Res Function(LoginEvent) __);
+}
+
+/// Adds pattern-matching-related methods to [LoginEvent].
+extension LoginEventPatterns on LoginEvent {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(LoginUsernameChanged value)? usernameChanged,
@@ -64,58 +55,256 @@ mixin _$LoginEvent {
     TResult Function(LoginStarted value)? loginStarted,
     TResult Function(LoginErrorOccurred value)? errorOccurred,
     required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+  }) {
+    final _that = this;
+    switch (_that) {
+      case LoginUsernameChanged() when usernameChanged != null:
+        return usernameChanged(_that);
+      case LoginPasswordChanged() when passwordChanged != null:
+        return passwordChanged(_that);
+      case LoginStarted() when loginStarted != null:
+        return loginStarted(_that);
+      case LoginErrorOccurred() when errorOccurred != null:
+        return errorOccurred(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(LoginUsernameChanged value) usernameChanged,
+    required TResult Function(LoginPasswordChanged value) passwordChanged,
+    required TResult Function(LoginStarted value) loginStarted,
+    required TResult Function(LoginErrorOccurred value) errorOccurred,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case LoginUsernameChanged():
+        return usernameChanged(_that);
+      case LoginPasswordChanged():
+        return passwordChanged(_that);
+      case LoginStarted():
+        return loginStarted(_that);
+      case LoginErrorOccurred():
+        return errorOccurred(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(LoginUsernameChanged value)? usernameChanged,
+    TResult? Function(LoginPasswordChanged value)? passwordChanged,
+    TResult? Function(LoginStarted value)? loginStarted,
+    TResult? Function(LoginErrorOccurred value)? errorOccurred,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case LoginUsernameChanged() when usernameChanged != null:
+        return usernameChanged(_that);
+      case LoginPasswordChanged() when passwordChanged != null:
+        return passwordChanged(_that);
+      case LoginStarted() when loginStarted != null:
+        return loginStarted(_that);
+      case LoginErrorOccurred() when errorOccurred != null:
+        return errorOccurred(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String username)? usernameChanged,
+    TResult Function(String password)? passwordChanged,
+    TResult Function()? loginStarted,
+    TResult Function(BaseException? error)? errorOccurred,
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case LoginUsernameChanged() when usernameChanged != null:
+        return usernameChanged(_that.username);
+      case LoginPasswordChanged() when passwordChanged != null:
+        return passwordChanged(_that.password);
+      case LoginStarted() when loginStarted != null:
+        return loginStarted();
+      case LoginErrorOccurred() when errorOccurred != null:
+        return errorOccurred(_that.error);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String username) usernameChanged,
+    required TResult Function(String password) passwordChanged,
+    required TResult Function() loginStarted,
+    required TResult Function(BaseException? error) errorOccurred,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case LoginUsernameChanged():
+        return usernameChanged(_that.username);
+      case LoginPasswordChanged():
+        return passwordChanged(_that.password);
+      case LoginStarted():
+        return loginStarted();
+      case LoginErrorOccurred():
+        return errorOccurred(_that.error);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String username)? usernameChanged,
+    TResult? Function(String password)? passwordChanged,
+    TResult? Function()? loginStarted,
+    TResult? Function(BaseException? error)? errorOccurred,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case LoginUsernameChanged() when usernameChanged != null:
+        return usernameChanged(_that.username);
+      case LoginPasswordChanged() when passwordChanged != null:
+        return passwordChanged(_that.password);
+      case LoginStarted() when loginStarted != null:
+        return loginStarted();
+      case LoginErrorOccurred() when errorOccurred != null:
+        return errorOccurred(_that.error);
+      case _:
+        return null;
+    }
+  }
 }
 
 /// @nodoc
-abstract class $LoginEventCopyWith<$Res> {
-  factory $LoginEventCopyWith(
-          LoginEvent value, $Res Function(LoginEvent) then) =
-      _$LoginEventCopyWithImpl<$Res, LoginEvent>;
-}
 
-/// @nodoc
-class _$LoginEventCopyWithImpl<$Res, $Val extends LoginEvent>
-    implements $LoginEventCopyWith<$Res> {
-  _$LoginEventCopyWithImpl(this._value, this._then);
+class LoginUsernameChanged implements LoginEvent {
+  const LoginUsernameChanged(this.username);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final String username;
 
   /// Create a copy of LoginEvent
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $LoginUsernameChangedCopyWith<LoginUsernameChanged> get copyWith =>
+      _$LoginUsernameChangedCopyWithImpl<LoginUsernameChanged>(
+          this, _$identity);
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is LoginUsernameChanged &&
+            (identical(other.username, username) ||
+                other.username == username));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, username);
+
+  @override
+  String toString() {
+    return 'LoginEvent.usernameChanged(username: $username)';
+  }
 }
 
 /// @nodoc
-abstract class _$$LoginUsernameChangedImplCopyWith<$Res> {
-  factory _$$LoginUsernameChangedImplCopyWith(_$LoginUsernameChangedImpl value,
-          $Res Function(_$LoginUsernameChangedImpl) then) =
-      __$$LoginUsernameChangedImplCopyWithImpl<$Res>;
+abstract mixin class $LoginUsernameChangedCopyWith<$Res>
+    implements $LoginEventCopyWith<$Res> {
+  factory $LoginUsernameChangedCopyWith(LoginUsernameChanged value,
+          $Res Function(LoginUsernameChanged) _then) =
+      _$LoginUsernameChangedCopyWithImpl;
   @useResult
   $Res call({String username});
 }
 
 /// @nodoc
-class __$$LoginUsernameChangedImplCopyWithImpl<$Res>
-    extends _$LoginEventCopyWithImpl<$Res, _$LoginUsernameChangedImpl>
-    implements _$$LoginUsernameChangedImplCopyWith<$Res> {
-  __$$LoginUsernameChangedImplCopyWithImpl(_$LoginUsernameChangedImpl _value,
-      $Res Function(_$LoginUsernameChangedImpl) _then)
-      : super(_value, _then);
+class _$LoginUsernameChangedCopyWithImpl<$Res>
+    implements $LoginUsernameChangedCopyWith<$Res> {
+  _$LoginUsernameChangedCopyWithImpl(this._self, this._then);
+
+  final LoginUsernameChanged _self;
+  final $Res Function(LoginUsernameChanged) _then;
 
   /// Create a copy of LoginEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? username = null,
   }) {
-    return _then(_$LoginUsernameChangedImpl(
+    return _then(LoginUsernameChanged(
       null == username
-          ? _value.username
+          ? _self.username
           : username // ignore: cast_nullable_to_non_nullable
               as String,
     ));
@@ -124,154 +313,64 @@ class __$$LoginUsernameChangedImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$LoginUsernameChangedImpl implements LoginUsernameChanged {
-  const _$LoginUsernameChangedImpl(this.username);
+class LoginPasswordChanged implements LoginEvent {
+  const LoginPasswordChanged(this.password);
 
-  @override
-  final String username;
+  final String password;
 
-  @override
-  String toString() {
-    return 'LoginEvent.usernameChanged(username: $username)';
-  }
+  /// Create a copy of LoginEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $LoginPasswordChangedCopyWith<LoginPasswordChanged> get copyWith =>
+      _$LoginPasswordChangedCopyWithImpl<LoginPasswordChanged>(
+          this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$LoginUsernameChangedImpl &&
-            (identical(other.username, username) ||
-                other.username == username));
+            other is LoginPasswordChanged &&
+            (identical(other.password, password) ||
+                other.password == password));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, username);
-
-  /// Create a copy of LoginEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$LoginUsernameChangedImplCopyWith<_$LoginUsernameChangedImpl>
-      get copyWith =>
-          __$$LoginUsernameChangedImplCopyWithImpl<_$LoginUsernameChangedImpl>(
-              this, _$identity);
+  int get hashCode => Object.hash(runtimeType, password);
 
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String username) usernameChanged,
-    required TResult Function(String password) passwordChanged,
-    required TResult Function() loginStarted,
-    required TResult Function(BaseException<dynamic>? error) errorOccurred,
-  }) {
-    return usernameChanged(username);
+  String toString() {
+    return 'LoginEvent.passwordChanged(password: $password)';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String username)? usernameChanged,
-    TResult? Function(String password)? passwordChanged,
-    TResult? Function()? loginStarted,
-    TResult? Function(BaseException<dynamic>? error)? errorOccurred,
-  }) {
-    return usernameChanged?.call(username);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String username)? usernameChanged,
-    TResult Function(String password)? passwordChanged,
-    TResult Function()? loginStarted,
-    TResult Function(BaseException<dynamic>? error)? errorOccurred,
-    required TResult orElse(),
-  }) {
-    if (usernameChanged != null) {
-      return usernameChanged(username);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(LoginUsernameChanged value) usernameChanged,
-    required TResult Function(LoginPasswordChanged value) passwordChanged,
-    required TResult Function(LoginStarted value) loginStarted,
-    required TResult Function(LoginErrorOccurred value) errorOccurred,
-  }) {
-    return usernameChanged(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(LoginUsernameChanged value)? usernameChanged,
-    TResult? Function(LoginPasswordChanged value)? passwordChanged,
-    TResult? Function(LoginStarted value)? loginStarted,
-    TResult? Function(LoginErrorOccurred value)? errorOccurred,
-  }) {
-    return usernameChanged?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(LoginUsernameChanged value)? usernameChanged,
-    TResult Function(LoginPasswordChanged value)? passwordChanged,
-    TResult Function(LoginStarted value)? loginStarted,
-    TResult Function(LoginErrorOccurred value)? errorOccurred,
-    required TResult orElse(),
-  }) {
-    if (usernameChanged != null) {
-      return usernameChanged(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class LoginUsernameChanged implements LoginEvent {
-  const factory LoginUsernameChanged(final String username) =
-      _$LoginUsernameChangedImpl;
-
-  String get username;
-
-  /// Create a copy of LoginEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$LoginUsernameChangedImplCopyWith<_$LoginUsernameChangedImpl>
-      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$LoginPasswordChangedImplCopyWith<$Res> {
-  factory _$$LoginPasswordChangedImplCopyWith(_$LoginPasswordChangedImpl value,
-          $Res Function(_$LoginPasswordChangedImpl) then) =
-      __$$LoginPasswordChangedImplCopyWithImpl<$Res>;
+abstract mixin class $LoginPasswordChangedCopyWith<$Res>
+    implements $LoginEventCopyWith<$Res> {
+  factory $LoginPasswordChangedCopyWith(LoginPasswordChanged value,
+          $Res Function(LoginPasswordChanged) _then) =
+      _$LoginPasswordChangedCopyWithImpl;
   @useResult
   $Res call({String password});
 }
 
 /// @nodoc
-class __$$LoginPasswordChangedImplCopyWithImpl<$Res>
-    extends _$LoginEventCopyWithImpl<$Res, _$LoginPasswordChangedImpl>
-    implements _$$LoginPasswordChangedImplCopyWith<$Res> {
-  __$$LoginPasswordChangedImplCopyWithImpl(_$LoginPasswordChangedImpl _value,
-      $Res Function(_$LoginPasswordChangedImpl) _then)
-      : super(_value, _then);
+class _$LoginPasswordChangedCopyWithImpl<$Res>
+    implements $LoginPasswordChangedCopyWith<$Res> {
+  _$LoginPasswordChangedCopyWithImpl(this._self, this._then);
+
+  final LoginPasswordChanged _self;
+  final $Res Function(LoginPasswordChanged) _then;
 
   /// Create a copy of LoginEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
-  @override
   $Res call({
     Object? password = null,
   }) {
-    return _then(_$LoginPasswordChangedImpl(
+    return _then(LoginPasswordChanged(
       null == password
-          ? _value.password
+          ? _self.password
           : password // ignore: cast_nullable_to_non_nullable
               as String,
     ));
@@ -280,394 +379,86 @@ class __$$LoginPasswordChangedImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$LoginPasswordChangedImpl implements LoginPasswordChanged {
-  const _$LoginPasswordChangedImpl(this.password);
-
-  @override
-  final String password;
-
-  @override
-  String toString() {
-    return 'LoginEvent.passwordChanged(password: $password)';
-  }
+class LoginStarted implements LoginEvent {
+  const LoginStarted();
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$LoginPasswordChangedImpl &&
-            (identical(other.password, password) ||
-                other.password == password));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, password);
-
-  /// Create a copy of LoginEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$LoginPasswordChangedImplCopyWith<_$LoginPasswordChangedImpl>
-      get copyWith =>
-          __$$LoginPasswordChangedImplCopyWithImpl<_$LoginPasswordChangedImpl>(
-              this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String username) usernameChanged,
-    required TResult Function(String password) passwordChanged,
-    required TResult Function() loginStarted,
-    required TResult Function(BaseException<dynamic>? error) errorOccurred,
-  }) {
-    return passwordChanged(password);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String username)? usernameChanged,
-    TResult? Function(String password)? passwordChanged,
-    TResult? Function()? loginStarted,
-    TResult? Function(BaseException<dynamic>? error)? errorOccurred,
-  }) {
-    return passwordChanged?.call(password);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String username)? usernameChanged,
-    TResult Function(String password)? passwordChanged,
-    TResult Function()? loginStarted,
-    TResult Function(BaseException<dynamic>? error)? errorOccurred,
-    required TResult orElse(),
-  }) {
-    if (passwordChanged != null) {
-      return passwordChanged(password);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(LoginUsernameChanged value) usernameChanged,
-    required TResult Function(LoginPasswordChanged value) passwordChanged,
-    required TResult Function(LoginStarted value) loginStarted,
-    required TResult Function(LoginErrorOccurred value) errorOccurred,
-  }) {
-    return passwordChanged(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(LoginUsernameChanged value)? usernameChanged,
-    TResult? Function(LoginPasswordChanged value)? passwordChanged,
-    TResult? Function(LoginStarted value)? loginStarted,
-    TResult? Function(LoginErrorOccurred value)? errorOccurred,
-  }) {
-    return passwordChanged?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(LoginUsernameChanged value)? usernameChanged,
-    TResult Function(LoginPasswordChanged value)? passwordChanged,
-    TResult Function(LoginStarted value)? loginStarted,
-    TResult Function(LoginErrorOccurred value)? errorOccurred,
-    required TResult orElse(),
-  }) {
-    if (passwordChanged != null) {
-      return passwordChanged(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class LoginPasswordChanged implements LoginEvent {
-  const factory LoginPasswordChanged(final String password) =
-      _$LoginPasswordChangedImpl;
-
-  String get password;
-
-  /// Create a copy of LoginEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$LoginPasswordChangedImplCopyWith<_$LoginPasswordChangedImpl>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$LoginStartedImplCopyWith<$Res> {
-  factory _$$LoginStartedImplCopyWith(
-          _$LoginStartedImpl value, $Res Function(_$LoginStartedImpl) then) =
-      __$$LoginStartedImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$LoginStartedImplCopyWithImpl<$Res>
-    extends _$LoginEventCopyWithImpl<$Res, _$LoginStartedImpl>
-    implements _$$LoginStartedImplCopyWith<$Res> {
-  __$$LoginStartedImplCopyWithImpl(
-      _$LoginStartedImpl _value, $Res Function(_$LoginStartedImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of LoginEvent
-  /// with the given fields replaced by the non-null parameter values.
-}
-
-/// @nodoc
-
-class _$LoginStartedImpl implements LoginStarted {
-  const _$LoginStartedImpl();
-
-  @override
-  String toString() {
-    return 'LoginEvent.loginStarted()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoginStartedImpl);
+        (other.runtimeType == runtimeType && other is LoginStarted);
   }
 
   @override
   int get hashCode => runtimeType.hashCode;
 
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String username) usernameChanged,
-    required TResult Function(String password) passwordChanged,
-    required TResult Function() loginStarted,
-    required TResult Function(BaseException<dynamic>? error) errorOccurred,
-  }) {
-    return loginStarted();
+  String toString() {
+    return 'LoginEvent.loginStarted()';
   }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String username)? usernameChanged,
-    TResult? Function(String password)? passwordChanged,
-    TResult? Function()? loginStarted,
-    TResult? Function(BaseException<dynamic>? error)? errorOccurred,
-  }) {
-    return loginStarted?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String username)? usernameChanged,
-    TResult Function(String password)? passwordChanged,
-    TResult Function()? loginStarted,
-    TResult Function(BaseException<dynamic>? error)? errorOccurred,
-    required TResult orElse(),
-  }) {
-    if (loginStarted != null) {
-      return loginStarted();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(LoginUsernameChanged value) usernameChanged,
-    required TResult Function(LoginPasswordChanged value) passwordChanged,
-    required TResult Function(LoginStarted value) loginStarted,
-    required TResult Function(LoginErrorOccurred value) errorOccurred,
-  }) {
-    return loginStarted(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(LoginUsernameChanged value)? usernameChanged,
-    TResult? Function(LoginPasswordChanged value)? passwordChanged,
-    TResult? Function(LoginStarted value)? loginStarted,
-    TResult? Function(LoginErrorOccurred value)? errorOccurred,
-  }) {
-    return loginStarted?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(LoginUsernameChanged value)? usernameChanged,
-    TResult Function(LoginPasswordChanged value)? passwordChanged,
-    TResult Function(LoginStarted value)? loginStarted,
-    TResult Function(LoginErrorOccurred value)? errorOccurred,
-    required TResult orElse(),
-  }) {
-    if (loginStarted != null) {
-      return loginStarted(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class LoginStarted implements LoginEvent {
-  const factory LoginStarted() = _$LoginStartedImpl;
 }
 
 /// @nodoc
-abstract class _$$LoginErrorOccurredImplCopyWith<$Res> {
-  factory _$$LoginErrorOccurredImplCopyWith(_$LoginErrorOccurredImpl value,
-          $Res Function(_$LoginErrorOccurredImpl) then) =
-      __$$LoginErrorOccurredImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({BaseException<dynamic>? error});
-}
 
-/// @nodoc
-class __$$LoginErrorOccurredImplCopyWithImpl<$Res>
-    extends _$LoginEventCopyWithImpl<$Res, _$LoginErrorOccurredImpl>
-    implements _$$LoginErrorOccurredImplCopyWith<$Res> {
-  __$$LoginErrorOccurredImplCopyWithImpl(_$LoginErrorOccurredImpl _value,
-      $Res Function(_$LoginErrorOccurredImpl) _then)
-      : super(_value, _then);
+class LoginErrorOccurred implements LoginEvent {
+  const LoginErrorOccurred([this.error]);
+
+  final BaseException? error;
 
   /// Create a copy of LoginEvent
   /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? error = freezed,
-  }) {
-    return _then(_$LoginErrorOccurredImpl(
-      freezed == error
-          ? _value.error
-          : error // ignore: cast_nullable_to_non_nullable
-              as BaseException<dynamic>?,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$LoginErrorOccurredImpl implements LoginErrorOccurred {
-  const _$LoginErrorOccurredImpl([this.error]);
-
-  @override
-  final BaseException<dynamic>? error;
-
-  @override
-  String toString() {
-    return 'LoginEvent.errorOccurred(error: $error)';
-  }
+  $LoginErrorOccurredCopyWith<LoginErrorOccurred> get copyWith =>
+      _$LoginErrorOccurredCopyWithImpl<LoginErrorOccurred>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$LoginErrorOccurredImpl &&
+            other is LoginErrorOccurred &&
             (identical(other.error, error) || other.error == error));
   }
 
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
+  @override
+  String toString() {
+    return 'LoginEvent.errorOccurred(error: $error)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $LoginErrorOccurredCopyWith<$Res>
+    implements $LoginEventCopyWith<$Res> {
+  factory $LoginErrorOccurredCopyWith(
+          LoginErrorOccurred value, $Res Function(LoginErrorOccurred) _then) =
+      _$LoginErrorOccurredCopyWithImpl;
+  @useResult
+  $Res call({BaseException? error});
+}
+
+/// @nodoc
+class _$LoginErrorOccurredCopyWithImpl<$Res>
+    implements $LoginErrorOccurredCopyWith<$Res> {
+  _$LoginErrorOccurredCopyWithImpl(this._self, this._then);
+
+  final LoginErrorOccurred _self;
+  final $Res Function(LoginErrorOccurred) _then;
+
   /// Create a copy of LoginEvent
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
   @pragma('vm:prefer-inline')
-  _$$LoginErrorOccurredImplCopyWith<_$LoginErrorOccurredImpl> get copyWith =>
-      __$$LoginErrorOccurredImplCopyWithImpl<_$LoginErrorOccurredImpl>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String username) usernameChanged,
-    required TResult Function(String password) passwordChanged,
-    required TResult Function() loginStarted,
-    required TResult Function(BaseException<dynamic>? error) errorOccurred,
+  $Res call({
+    Object? error = freezed,
   }) {
-    return errorOccurred(error);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String username)? usernameChanged,
-    TResult? Function(String password)? passwordChanged,
-    TResult? Function()? loginStarted,
-    TResult? Function(BaseException<dynamic>? error)? errorOccurred,
-  }) {
-    return errorOccurred?.call(error);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String username)? usernameChanged,
-    TResult Function(String password)? passwordChanged,
-    TResult Function()? loginStarted,
-    TResult Function(BaseException<dynamic>? error)? errorOccurred,
-    required TResult orElse(),
-  }) {
-    if (errorOccurred != null) {
-      return errorOccurred(error);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(LoginUsernameChanged value) usernameChanged,
-    required TResult Function(LoginPasswordChanged value) passwordChanged,
-    required TResult Function(LoginStarted value) loginStarted,
-    required TResult Function(LoginErrorOccurred value) errorOccurred,
-  }) {
-    return errorOccurred(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(LoginUsernameChanged value)? usernameChanged,
-    TResult? Function(LoginPasswordChanged value)? passwordChanged,
-    TResult? Function(LoginStarted value)? loginStarted,
-    TResult? Function(LoginErrorOccurred value)? errorOccurred,
-  }) {
-    return errorOccurred?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(LoginUsernameChanged value)? usernameChanged,
-    TResult Function(LoginPasswordChanged value)? passwordChanged,
-    TResult Function(LoginStarted value)? loginStarted,
-    TResult Function(LoginErrorOccurred value)? errorOccurred,
-    required TResult orElse(),
-  }) {
-    if (errorOccurred != null) {
-      return errorOccurred(this);
-    }
-    return orElse();
+    return _then(LoginErrorOccurred(
+      freezed == error
+          ? _self.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as BaseException?,
+    ));
   }
 }
 
-abstract class LoginErrorOccurred implements LoginEvent {
-  const factory LoginErrorOccurred([final BaseException<dynamic>? error]) =
-      _$LoginErrorOccurredImpl;
-
-  BaseException<dynamic>? get error;
-
-  /// Create a copy of LoginEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$LoginErrorOccurredImplCopyWith<_$LoginErrorOccurredImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
+// dart format on

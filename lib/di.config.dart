@@ -1,5 +1,5 @@
-// dart format width=80
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// dart format width=80
 
 // **************************************************************************
 // InjectableConfigGenerator
@@ -42,15 +42,13 @@ extension GetItInjectableX on _i174.GetIt {
       environmentFilter,
     );
     final registerModule = _$RegisterModule();
+    gh.singleton<_i963.AuthBloc>(() => _i963.AuthBloc());
+    gh.singleton<_i932.SettingsBloc>(() => _i932.SettingsBloc());
     gh.singleton<_i558.FlutterSecureStorage>(
         () => registerModule.flutterSecureStorage);
-    gh.singleton<_i932.SettingsBloc>(() => _i932.SettingsBloc());
-    gh.singleton<_i963.AuthBloc>(() => _i963.AuthBloc());
-    gh.singleton<_i132.OauthTokenManager>(() => _i290.DefaultOauthTokenManager(
-        flutterSecureStorage: gh<_i558.FlutterSecureStorage>()));
     gh.singleton<_i551.AppRouter>(
         () => _i551.AppRouter(authBloc: gh<_i963.AuthBloc>()));
-    gh.singleton<_i193.LocalDataSource>(() => _i193.LocalDataSource(
+    gh.singleton<_i132.OauthTokenManager>(() => _i290.DefaultOauthTokenManager(
         flutterSecureStorage: gh<_i558.FlutterSecureStorage>()));
     gh.singleton<String>(
       () => registerModule.baseUrl,
@@ -60,6 +58,8 @@ extension GetItInjectableX on _i174.GetIt {
           tokenManager: gh<_i132.OauthTokenManager>(),
           baseUrl: gh<String>(instanceName: 'baseUrl'),
         ));
+    gh.singleton<_i193.LocalDataSource>(() => _i193.LocalDataSource(
+        flutterSecureStorage: gh<_i558.FlutterSecureStorage>()));
     gh.singleton<_i536.NetworkDataSource>(
         () => _i536.NetworkDataSource(gh<_i288.NetworkDio>()));
     gh.singleton<_i344.AuthRepository>(() => _i522.DefaultAuthRepository(

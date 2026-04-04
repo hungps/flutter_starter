@@ -34,21 +34,19 @@ class AppRouter extends RootStackRouter {
 
   @override
   List<AutoRouteGuard> get guards => [
-        AutoRouteGuard.simple(
-          (resolver, router) {
-            final isAuthenticated = _authBloc.state.loggedIn;
+        AutoRouteGuard.redirect((resolver) {
+          final isAuthenticated = _authBloc.state.loggedIn;
 
-            if (isAuthorizedRoute(resolver.routeName) && !isAuthenticated) {
-              return resolver.redirect(LoginRoute(), replace: true);
-            }
+          if (isAuthorizedRoute(resolver.routeName) && !isAuthenticated) {
+            return LoginRoute();
+          }
 
-            if (isUnauthorizedRoute(resolver.routeName) && isAuthenticated) {
-              return resolver.redirect(HomeRoute(), replace: true);
-            }
+          if (isUnauthorizedRoute(resolver.routeName) && isAuthenticated) {
+            return HomeRoute();
+          }
 
-            resolver.next(true);
-          },
-        ),
+          return null;
+        }),
       ];
 
   @override

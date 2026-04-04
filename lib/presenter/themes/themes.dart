@@ -49,11 +49,11 @@ class AppTheme extends ThemeExtension<AppTheme> {
           elevation: 0,
           titleTextStyle: typographies.body,
           centerTitle: true,
-          color: Colors.transparent,
+          backgroundColor: Colors.transparent,
           foregroundColor: colors.text,
           surfaceTintColor: colors.text,
         ),
-        tabBarTheme: TabBarTheme(
+        tabBarTheme: TabBarThemeData(
           labelColor: colors.text,
           unselectedLabelColor: colors.text.withValues(alpha: 0.4),
         ),

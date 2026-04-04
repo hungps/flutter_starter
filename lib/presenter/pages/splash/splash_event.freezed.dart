@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,172 +9,45 @@ part of 'splash_event.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$SplashEvent {
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() verifyLoginStatusStarted,
-    required TResult Function(BaseException<dynamic>? error) errorOccurred,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? verifyLoginStatusStarted,
-    TResult? Function(BaseException<dynamic>? error)? errorOccurred,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? verifyLoginStatusStarted,
-    TResult Function(BaseException<dynamic>? error)? errorOccurred,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(SplashVerifyLoginStatusStarted value)
-        verifyLoginStatusStarted,
-    required TResult Function(SplashErrorOccurred value) errorOccurred,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(SplashVerifyLoginStatusStarted value)?
-        verifyLoginStatusStarted,
-    TResult? Function(SplashErrorOccurred value)? errorOccurred,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(SplashVerifyLoginStatusStarted value)?
-        verifyLoginStatusStarted,
-    TResult Function(SplashErrorOccurred value)? errorOccurred,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $SplashEventCopyWith<$Res> {
-  factory $SplashEventCopyWith(
-          SplashEvent value, $Res Function(SplashEvent) then) =
-      _$SplashEventCopyWithImpl<$Res, SplashEvent>;
-}
-
-/// @nodoc
-class _$SplashEventCopyWithImpl<$Res, $Val extends SplashEvent>
-    implements $SplashEventCopyWith<$Res> {
-  _$SplashEventCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  /// Create a copy of SplashEvent
-  /// with the given fields replaced by the non-null parameter values.
-}
-
-/// @nodoc
-abstract class _$$SplashVerifyLoginStatusStartedImplCopyWith<$Res> {
-  factory _$$SplashVerifyLoginStatusStartedImplCopyWith(
-          _$SplashVerifyLoginStatusStartedImpl value,
-          $Res Function(_$SplashVerifyLoginStatusStartedImpl) then) =
-      __$$SplashVerifyLoginStatusStartedImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$SplashVerifyLoginStatusStartedImplCopyWithImpl<$Res>
-    extends _$SplashEventCopyWithImpl<$Res,
-        _$SplashVerifyLoginStatusStartedImpl>
-    implements _$$SplashVerifyLoginStatusStartedImplCopyWith<$Res> {
-  __$$SplashVerifyLoginStatusStartedImplCopyWithImpl(
-      _$SplashVerifyLoginStatusStartedImpl _value,
-      $Res Function(_$SplashVerifyLoginStatusStartedImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of SplashEvent
-  /// with the given fields replaced by the non-null parameter values.
-}
-
-/// @nodoc
-
-class _$SplashVerifyLoginStatusStartedImpl
-    implements SplashVerifyLoginStatusStarted {
-  const _$SplashVerifyLoginStatusStartedImpl();
-
-  @override
-  String toString() {
-    return 'SplashEvent.verifyLoginStatusStarted()';
-  }
-
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$SplashVerifyLoginStatusStartedImpl);
+        (other.runtimeType == runtimeType && other is SplashEvent);
   }
 
   @override
   int get hashCode => runtimeType.hashCode;
 
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() verifyLoginStatusStarted,
-    required TResult Function(BaseException<dynamic>? error) errorOccurred,
-  }) {
-    return verifyLoginStatusStarted();
+  String toString() {
+    return 'SplashEvent()';
   }
+}
 
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? verifyLoginStatusStarted,
-    TResult? Function(BaseException<dynamic>? error)? errorOccurred,
-  }) {
-    return verifyLoginStatusStarted?.call();
-  }
+/// @nodoc
+class $SplashEventCopyWith<$Res> {
+  $SplashEventCopyWith(SplashEvent _, $Res Function(SplashEvent) __);
+}
 
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? verifyLoginStatusStarted,
-    TResult Function(BaseException<dynamic>? error)? errorOccurred,
-    required TResult orElse(),
-  }) {
-    if (verifyLoginStatusStarted != null) {
-      return verifyLoginStatusStarted();
-    }
-    return orElse();
-  }
+/// Adds pattern-matching-related methods to [SplashEvent].
+extension SplashEventPatterns on SplashEvent {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
 
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(SplashVerifyLoginStatusStarted value)
-        verifyLoginStatusStarted,
-    required TResult Function(SplashErrorOccurred value) errorOccurred,
-  }) {
-    return verifyLoginStatusStarted(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(SplashVerifyLoginStatusStarted value)?
-        verifyLoginStatusStarted,
-    TResult? Function(SplashErrorOccurred value)? errorOccurred,
-  }) {
-    return verifyLoginStatusStarted?.call(this);
-  }
-
-  @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(SplashVerifyLoginStatusStarted value)?
@@ -182,159 +55,250 @@ class _$SplashVerifyLoginStatusStartedImpl
     TResult Function(SplashErrorOccurred value)? errorOccurred,
     required TResult orElse(),
   }) {
-    if (verifyLoginStatusStarted != null) {
-      return verifyLoginStatusStarted(this);
+    final _that = this;
+    switch (_that) {
+      case SplashVerifyLoginStatusStarted()
+          when verifyLoginStatusStarted != null:
+        return verifyLoginStatusStarted(_that);
+      case SplashErrorOccurred() when errorOccurred != null:
+        return errorOccurred(_that);
+      case _:
+        return orElse();
     }
-    return orElse();
   }
-}
 
-abstract class SplashVerifyLoginStatusStarted implements SplashEvent {
-  const factory SplashVerifyLoginStatusStarted() =
-      _$SplashVerifyLoginStatusStartedImpl;
-}
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
 
-/// @nodoc
-abstract class _$$SplashErrorOccurredImplCopyWith<$Res> {
-  factory _$$SplashErrorOccurredImplCopyWith(_$SplashErrorOccurredImpl value,
-          $Res Function(_$SplashErrorOccurredImpl) then) =
-      __$$SplashErrorOccurredImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({BaseException<dynamic>? error});
-}
-
-/// @nodoc
-class __$$SplashErrorOccurredImplCopyWithImpl<$Res>
-    extends _$SplashEventCopyWithImpl<$Res, _$SplashErrorOccurredImpl>
-    implements _$$SplashErrorOccurredImplCopyWith<$Res> {
-  __$$SplashErrorOccurredImplCopyWithImpl(_$SplashErrorOccurredImpl _value,
-      $Res Function(_$SplashErrorOccurredImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of SplashEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? error = freezed,
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(SplashVerifyLoginStatusStarted value)
+        verifyLoginStatusStarted,
+    required TResult Function(SplashErrorOccurred value) errorOccurred,
   }) {
-    return _then(_$SplashErrorOccurredImpl(
-      freezed == error
-          ? _value.error
-          : error // ignore: cast_nullable_to_non_nullable
-              as BaseException<dynamic>?,
-    ));
+    final _that = this;
+    switch (_that) {
+      case SplashVerifyLoginStatusStarted():
+        return verifyLoginStatusStarted(_that);
+      case SplashErrorOccurred():
+        return errorOccurred(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(SplashVerifyLoginStatusStarted value)?
+        verifyLoginStatusStarted,
+    TResult? Function(SplashErrorOccurred value)? errorOccurred,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case SplashVerifyLoginStatusStarted()
+          when verifyLoginStatusStarted != null:
+        return verifyLoginStatusStarted(_that);
+      case SplashErrorOccurred() when errorOccurred != null:
+        return errorOccurred(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? verifyLoginStatusStarted,
+    TResult Function(BaseException? error)? errorOccurred,
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case SplashVerifyLoginStatusStarted()
+          when verifyLoginStatusStarted != null:
+        return verifyLoginStatusStarted();
+      case SplashErrorOccurred() when errorOccurred != null:
+        return errorOccurred(_that.error);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() verifyLoginStatusStarted,
+    required TResult Function(BaseException? error) errorOccurred,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case SplashVerifyLoginStatusStarted():
+        return verifyLoginStatusStarted();
+      case SplashErrorOccurred():
+        return errorOccurred(_that.error);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? verifyLoginStatusStarted,
+    TResult? Function(BaseException? error)? errorOccurred,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case SplashVerifyLoginStatusStarted()
+          when verifyLoginStatusStarted != null:
+        return verifyLoginStatusStarted();
+      case SplashErrorOccurred() when errorOccurred != null:
+        return errorOccurred(_that.error);
+      case _:
+        return null;
+    }
   }
 }
 
 /// @nodoc
 
-class _$SplashErrorOccurredImpl implements SplashErrorOccurred {
-  const _$SplashErrorOccurredImpl([this.error]);
-
-  @override
-  final BaseException<dynamic>? error;
-
-  @override
-  String toString() {
-    return 'SplashEvent.errorOccurred(error: $error)';
-  }
+class SplashVerifyLoginStatusStarted implements SplashEvent {
+  const SplashVerifyLoginStatusStarted();
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SplashErrorOccurredImpl &&
+            other is SplashVerifyLoginStatusStarted);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  String toString() {
+    return 'SplashEvent.verifyLoginStatusStarted()';
+  }
+}
+
+/// @nodoc
+
+class SplashErrorOccurred implements SplashEvent {
+  const SplashErrorOccurred([this.error]);
+
+  final BaseException? error;
+
+  /// Create a copy of SplashEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $SplashErrorOccurredCopyWith<SplashErrorOccurred> get copyWith =>
+      _$SplashErrorOccurredCopyWithImpl<SplashErrorOccurred>(this, _$identity);
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is SplashErrorOccurred &&
             (identical(other.error, error) || other.error == error));
   }
 
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
+  @override
+  String toString() {
+    return 'SplashEvent.errorOccurred(error: $error)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $SplashErrorOccurredCopyWith<$Res>
+    implements $SplashEventCopyWith<$Res> {
+  factory $SplashErrorOccurredCopyWith(
+          SplashErrorOccurred value, $Res Function(SplashErrorOccurred) _then) =
+      _$SplashErrorOccurredCopyWithImpl;
+  @useResult
+  $Res call({BaseException? error});
+}
+
+/// @nodoc
+class _$SplashErrorOccurredCopyWithImpl<$Res>
+    implements $SplashErrorOccurredCopyWith<$Res> {
+  _$SplashErrorOccurredCopyWithImpl(this._self, this._then);
+
+  final SplashErrorOccurred _self;
+  final $Res Function(SplashErrorOccurred) _then;
+
   /// Create a copy of SplashEvent
   /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
   @pragma('vm:prefer-inline')
-  _$$SplashErrorOccurredImplCopyWith<_$SplashErrorOccurredImpl> get copyWith =>
-      __$$SplashErrorOccurredImplCopyWithImpl<_$SplashErrorOccurredImpl>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() verifyLoginStatusStarted,
-    required TResult Function(BaseException<dynamic>? error) errorOccurred,
+  $Res call({
+    Object? error = freezed,
   }) {
-    return errorOccurred(error);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? verifyLoginStatusStarted,
-    TResult? Function(BaseException<dynamic>? error)? errorOccurred,
-  }) {
-    return errorOccurred?.call(error);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? verifyLoginStatusStarted,
-    TResult Function(BaseException<dynamic>? error)? errorOccurred,
-    required TResult orElse(),
-  }) {
-    if (errorOccurred != null) {
-      return errorOccurred(error);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(SplashVerifyLoginStatusStarted value)
-        verifyLoginStatusStarted,
-    required TResult Function(SplashErrorOccurred value) errorOccurred,
-  }) {
-    return errorOccurred(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(SplashVerifyLoginStatusStarted value)?
-        verifyLoginStatusStarted,
-    TResult? Function(SplashErrorOccurred value)? errorOccurred,
-  }) {
-    return errorOccurred?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(SplashVerifyLoginStatusStarted value)?
-        verifyLoginStatusStarted,
-    TResult Function(SplashErrorOccurred value)? errorOccurred,
-    required TResult orElse(),
-  }) {
-    if (errorOccurred != null) {
-      return errorOccurred(this);
-    }
-    return orElse();
+    return _then(SplashErrorOccurred(
+      freezed == error
+          ? _self.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as BaseException?,
+    ));
   }
 }
 
-abstract class SplashErrorOccurred implements SplashEvent {
-  const factory SplashErrorOccurred([final BaseException<dynamic>? error]) =
-      _$SplashErrorOccurredImpl;
-
-  BaseException<dynamic>? get error;
-
-  /// Create a copy of SplashEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SplashErrorOccurredImplCopyWith<_$SplashErrorOccurredImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
+// dart format on

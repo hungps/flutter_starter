@@ -7,7 +7,7 @@ part 'splash_state.freezed.dart';
 enum SplashStatus { loading, success, failure }
 
 @freezed
-class SplashState with _$SplashState {
+abstract class SplashState with _$SplashState {
   const factory SplashState({
     @Default(SplashStatus.loading) SplashStatus status,
     Account? account,
