@@ -12,7 +12,7 @@ enum LoginStatus {
 }
 
 @freezed
-class LoginState with _$LoginState {
+abstract class LoginState with _$LoginState {
   const factory LoginState({
     @Default(LoginStatus.initial) LoginStatus status,
     Account? account,

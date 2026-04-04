@@ -32,12 +32,12 @@ class DefaultOauthTokenManager extends OauthTokenManager {
 
   @override
   Future<String?> getAccessToken() async {
-    return _storage.read(key: _accessTokenKey).onError((_, __) => null);
+    return _storage.read(key: _accessTokenKey).onError((_, _) => null);
   }
 
   @override
   Future<String?> getRefreshToken() async {
-    return _storage.read(key: _refreshTokenKey).onError((_, __) => null);
+    return _storage.read(key: _refreshTokenKey).onError((_, _) => null);
   }
 
   @override

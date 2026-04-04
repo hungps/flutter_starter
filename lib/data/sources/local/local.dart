@@ -16,7 +16,7 @@ class LocalDataSource {
     return await _storage
         .read(key: _initializedKey)
         .then((value) => int.tryParse(value ?? ''))
-        .onError((_, __) => null);
+        .onError((_, _) => null);
   }
 
   Future<void> saveInitializedVersion(int versionCode) async {
