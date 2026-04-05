@@ -1,4 +1,4 @@
-import 'package:bloc/bloc.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:flutter_starter/data/entities/account.dart';
@@ -22,7 +22,7 @@ void main() {
 
   setUpAll(() {
     // Register fallback for AuthEvent so any() works in when/verify
-    registerFallbackValue<AuthEvent>(const AuthLoggedOut());
+    registerFallbackValue(const AuthLoggedOut());
   });
 
   setUp(() {

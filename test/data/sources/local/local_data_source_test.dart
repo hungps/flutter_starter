@@ -42,7 +42,7 @@ void main() {
     });
 
     test('returns null when storage throws an error', () async {
-      when(() => mockStorage.read(key: storageKey)).thenThrow(Exception('storage error'));
+      when(() => mockStorage.read(key: storageKey)).thenAnswer((_) => Future.error(Exception('storage error')));
 
       final result = await dataSource.getInitializedVersion();
 

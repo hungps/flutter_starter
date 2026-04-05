@@ -17,7 +17,7 @@ void main() {
   late MockLoginUseCase mockLoginUseCase;
 
   setUpAll(() {
-    registerFallbackValue<LoginParams>((username: '', password: ''));
+    registerFallbackValue((username: '', password: ''));
   });
 
   setUp(() {
@@ -95,6 +95,7 @@ void main() {
             .having((s) => s.status, 'status', LoginStatus.failure)
             .having((s) => s.error, 'error', isA<LoginInvalidEmailPasswordException>()),
       ],
+      errors: () => [isA<LoginInvalidEmailPasswordException>()],
     );
 
     blocTest<LoginBloc, LoginState>(

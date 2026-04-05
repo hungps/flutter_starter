@@ -31,7 +31,7 @@ void main() {
     });
 
     test('returns null when storage throws', () async {
-      when(() => mockStorage.read(key: accessKey)).thenThrow(Exception('read error'));
+      when(() => mockStorage.read(key: accessKey)).thenAnswer((_) => Future.error(Exception('read error')));
 
       expect(await manager.getAccessToken(), isNull);
     });
@@ -51,7 +51,7 @@ void main() {
     });
 
     test('returns null when storage throws', () async {
-      when(() => mockStorage.read(key: refreshKey)).thenThrow(Exception('read error'));
+      when(() => mockStorage.read(key: refreshKey)).thenAnswer((_) => Future.error(Exception('read error')));
 
       expect(await manager.getRefreshToken(), isNull);
     });
@@ -122,7 +122,7 @@ void main() {
     });
 
     test('returns original headers when storage throws', () async {
-      when(() => mockStorage.read(key: accessKey)).thenThrow(Exception('err'));
+      when(() => mockStorage.read(key: accessKey)).thenAnswer((_) => Future.error(Exception('err')));
 
       final headers = {'X-Custom': 'value'};
       final result = await manager.getAuthenticatedHeaders(headers);

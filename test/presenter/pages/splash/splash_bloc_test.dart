@@ -33,8 +33,8 @@ void main() {
     });
 
     blocTest<SplashBloc, SplashState>(
-      // Initial state is already SplashStatus.loading, so the first emit (loading) is
-      // deduplicated. Only the success state is emitted.
+      // The first emit() always fires (bloc_test 10 / BLoC 9.2 _emitted flag),
+      // even when the value equals the initial state. So loading appears first.
       'emits success with account on SplashVerifyLoginStatusStarted when use case succeeds',
       build: () {
         when(() => mockUseCase(any())).thenAnswer((_) async => _account);
@@ -42,25 +42,27 @@ void main() {
       },
       act: (bloc) => bloc.add(const SplashVerifyLoginStatusStarted()),
       expect: () => [
+        const SplashState(status: SplashStatus.loading),
         const SplashState(status: SplashStatus.success, account: _account),
       ],
     );
 
     blocTest<SplashBloc, SplashState>(
-      // Same deduplication: initial=loading, first emit=loading (skipped), then failure.
       'emits failure when use case throws',
       build: () {
-        when(() => mockUseCase(any())).thenThrow(UnauthorizedException());
+        when(() => mockUseCase(any())).thenAnswer((_) => Future.error(UnauthorizedException()));
         return SplashBloc(verifyLoginStatus: mockUseCase);
       },
       act: (bloc) => bloc.add(const SplashVerifyLoginStatusStarted()),
       expect: () => [
+        const SplashState(status: SplashStatus.loading),
         isA<SplashState>().having(
           (s) => s.status,
           'status',
           SplashStatus.failure,
         ),
       ],
+      errors: () => [isA<UnauthorizedException>()],
     );
 
     blocTest<SplashBloc, SplashState>(
