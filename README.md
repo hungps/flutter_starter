@@ -1,6 +1,6 @@
 # Flutter Starter
 
-A production-ready Flutter starter template built with Clean Architecture, multi-flavor support, BLoC state management, and localization (English + Vietnamese).
+A production-ready Flutter starter template built with Clean Architecture, multi-flavor support, BLoC state management, and localization.
 
 ## Tech Stack
 
